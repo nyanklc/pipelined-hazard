@@ -1,0 +1,16 @@
+module HazardUnit(
+	input Match,
+	input RegWriteM,
+	RegWriteW,
+	MemtoRegE,
+	output StallF,
+	output StallD,
+	output FlushD,
+	output FlushE,
+	output ForwardAE,
+	output ForwardBE
+);
+
+
+
+endmodule

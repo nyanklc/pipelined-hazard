@@ -1,0 +1,29 @@
+module dpath(
+    // Controller inputs
+    input       PCSrcW,
+    input       BranchTakenE,
+    input       RegWriteW,
+    input [1:0] RegSrcD,
+    input       ImmSrcD,
+    input [3:0] ALUControlE,
+    input       ALUSrcE,
+    input       MemWriteM,
+    input       MemtoRegW,
+
+    // Hazard unit inputs
+    input StallF,
+    input StallD,
+    input FlushD,
+    input FlushE,
+    input ForwardsAE,
+    input ForwardBE,
+
+    // Outputs
+    output [1:0] Op,
+    output [5:0] Funct,
+    output [3:0] Rd,
+    output [3:0] Cond,
+    output [3:0] ALUFlags
+);
+
+endmodule

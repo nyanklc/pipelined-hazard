@@ -1,0 +1,957 @@
+Analysis & Synthesis report for hazard
+Mon Jun 12 04:15:59 2023
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: dpath:dp|Register_sync_rw:PC_REG
+ 10. Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:PC_INPUT_MUX
+ 11. Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:BRANCH_TAKEN_MUX
+ 12. Parameter Settings for User Entity Instance: dpath:dp|Adder:PC_ADDER
+ 13. Parameter Settings for User Entity Instance: dpath:dp|Instruction_memory:INST_MEM
+ 14. Parameter Settings for User Entity Instance: dpath:dp|Register_sync_rw:FETCH_REG0
+ 15. Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:A1_MUX
+ 16. Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:A2_MUX
+ 17. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE
+ 18. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[0].Reg
+ 19. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[1].Reg
+ 20. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[2].Reg
+ 21. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[3].Reg
+ 22. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[4].Reg
+ 23. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[5].Reg
+ 24. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[6].Reg
+ 25. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[7].Reg
+ 26. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[8].Reg
+ 27. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[9].Reg
+ 28. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[10].Reg
+ 29. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[11].Reg
+ 30. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[12].Reg
+ 31. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[13].Reg
+ 32. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[14].Reg
+ 33. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_0
+ 34. Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_1
+ 35. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:DECODE_REG0
+ 36. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:DECODE_REG1
+ 37. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:DECODE_REG2
+ 38. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:DECODE_REG3
+ 39. Parameter Settings for User Entity Instance: dpath:dp|Mux_4to1:FORWARD_MUX_A
+ 40. Parameter Settings for User Entity Instance: dpath:dp|Mux_4to1:FORWARD_MUX_B
+ 41. Parameter Settings for User Entity Instance: dpath:dp|ALU:ALU_MODULE
+ 42. Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:ALU_SRCB_MUX
+ 43. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:EXECUTE_REG0
+ 44. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:EXECUTE_REG1
+ 45. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:EXECUTE_REG2
+ 46. Parameter Settings for User Entity Instance: dpath:dp|Memory:MEMORY_MODULE
+ 47. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:MEMORY_REG0
+ 48. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:MEMORY_REG1
+ 49. Parameter Settings for User Entity Instance: dpath:dp|Register_simple:MEMORY_REG2
+ 50. Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:RESULT_MUX
+ 51. Port Connectivity Checks: "controller:cont"
+ 52. Port Connectivity Checks: "dpath:dp|ALU:ALU_MODULE"
+ 53. Port Connectivity Checks: "dpath:dp|Mux_4to1:FORWARD_MUX_B"
+ 54. Port Connectivity Checks: "dpath:dp|Mux_4to1:FORWARD_MUX_A"
+ 55. Port Connectivity Checks: "dpath:dp|Register_file:REG_FILE|Decoder_4to16:dec"
+ 56. Port Connectivity Checks: "dpath:dp|Mux_2to1:A1_MUX"
+ 57. Port Connectivity Checks: "dpath:dp|Adder:PC_ADDER"
+ 58. Port Connectivity Checks: "dpath:dp"
+ 59. Post-Synthesis Netlist Statistics for Top Partition
+ 60. Elapsed Time Per Partition
+ 61. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Jun 12 04:15:59 2023          ;
+; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Revision Name                   ; hazard                                         ;
+; Top-level Entity Name           ; hazard                                         ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 2                                              ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; hazard             ; hazard             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
+; hazard.v                         ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/hazard.v             ;         ;
+; dpath.v                          ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/dpath.v              ;         ;
+; Register_sync_rw.v               ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Register_sync_rw.v   ;         ;
+; Register_simple.v                ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Register_simple.v    ;         ;
+; Register_file.v                  ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Register_file.v      ;         ;
+; Mux_16to1.v                      ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Mux_16to1.v          ;         ;
+; Mux_4to1.v                       ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Mux_4to1.v           ;         ;
+; Mux_2to1.v                       ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Mux_2to1.v           ;         ;
+; Memory.v                         ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Memory.v             ;         ;
+; Instruction_memory.v             ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Instruction_memory.v ;         ;
+; Extender.v                       ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Extender.v           ;         ;
+; Decoder_4to16.v                  ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Decoder_4to16.v      ;         ;
+; better_extender.v                ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/better_extender.v    ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/ALU.v                ;         ;
+; Adder.v                          ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/Adder.v              ;         ;
+; HazardUnitv.v                    ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/HazardUnitv.v        ;         ;
+; controller.v                     ; yes             ; User Verilog HDL File  ; C:/Users/nekilic/Desktop/46/hazard/controller.v         ;         ;
+; mem_data2.txt                    ; yes             ; Auto-Found File        ; C:/Users/nekilic/Desktop/46/hazard/mem_data2.txt        ;         ;
+; mem_data.txt                     ; yes             ; Auto-Found File        ; C:/Users/nekilic/Desktop/46/hazard/mem_data.txt         ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |hazard                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |hazard             ; hazard      ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_sync_rw:PC_REG ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:PC_INPUT_MUX ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:BRANCH_TAKEN_MUX ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Adder:PC_ADDER ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Instruction_memory:INST_MEM ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; BYTE_SIZE      ; 4     ; Signed Integer                                           ;
+; ADDR_WIDTH     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_sync_rw:FETCH_REG0 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:A1_MUX ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:A2_MUX ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[0].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[1].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[2].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[3].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[4].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[5].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[6].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[7].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[8].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[9].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[10].Reg ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[11].Reg ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[12].Reg ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[13].Reg ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[14].Reg ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_0 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:DECODE_REG0 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:DECODE_REG1 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:DECODE_REG2 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:DECODE_REG3 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Mux_4to1:FORWARD_MUX_A ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Mux_4to1:FORWARD_MUX_B ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|ALU:ALU_MODULE ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:ALU_SRCB_MUX ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:EXECUTE_REG0 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:EXECUTE_REG1 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:EXECUTE_REG2 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Memory:MEMORY_MODULE ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; BYTE_SIZE      ; 4     ; Signed Integer                                    ;
+; ADDR_WIDTH     ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:MEMORY_REG0 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:MEMORY_REG1 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Register_simple:MEMORY_REG2 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dpath:dp|Mux_2to1:RESULT_MUX ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controller:cont"                                                                           ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; BranchD     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; RegWriteD   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; MemWriteD   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; MemtoRegD   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALUSrcD     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALUControlD ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; RegWriteE   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; MemWriteE   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; MemtoRegM   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "dpath:dp|ALU:ALU_MODULE" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; CI   ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "dpath:dp|Mux_4to1:FORWARD_MUX_B" ;
++---------+-------+----------+--------------------------------+
+; Port    ; Type  ; Severity ; Details                        ;
++---------+-------+----------+--------------------------------+
+; input_3 ; Input ; Info     ; Stuck at GND                   ;
++---------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "dpath:dp|Mux_4to1:FORWARD_MUX_A" ;
++---------+-------+----------+--------------------------------+
+; Port    ; Type  ; Severity ; Details                        ;
++---------+-------+----------+--------------------------------+
+; input_3 ; Input ; Info     ; Stuck at GND                   ;
++---------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dpath:dp|Register_file:REG_FILE|Decoder_4to16:dec"                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; OUT  ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (15 bits) it drives; bit(s) "OUT[15..15]" have no fanouts ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "dpath:dp|Mux_2to1:A1_MUX" ;
++---------+-------+----------+-------------------------+
+; Port    ; Type  ; Severity ; Details                 ;
++---------+-------+----------+-------------------------+
+; input_1 ; Input ; Info     ; Stuck at VCC            ;
++---------+-------+----------+-------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "dpath:dp|Adder:PC_ADDER" ;
++---------------+-------+----------+------------------+
+; Port          ; Type  ; Severity ; Details          ;
++---------------+-------+----------+------------------+
+; DATA_B[31..3] ; Input ; Info     ; Stuck at GND     ;
+; DATA_B[1..0]  ; Input ; Info     ; Stuck at GND     ;
+; DATA_B[2]     ; Input ; Info     ; Stuck at VCC     ;
++---------------+-------+----------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dpath:dp"                                                                                  ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; result_wire ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register5   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register6   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register7   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register8   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register9   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register10  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register11  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register12  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register13  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register14  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register15  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+    Info: Processing started: Mon Jun 12 04:15:45 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hazard -c hazard
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file hazard.v
+    Info (12023): Found entity 1: hazard File: C:/Users/nekilic/Desktop/46/hazard/hazard.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dpath.v
+    Info (12023): Found entity 1: dpath File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
+    Info (12023): Found entity 1: shifter File: C:/Users/nekilic/Desktop/46/hazard/shifter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_sync_rw.v
+    Info (12023): Found entity 1: Register_sync_rw File: C:/Users/nekilic/Desktop/46/hazard/Register_sync_rw.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_simple.v
+    Info (12023): Found entity 1: Register_simple File: C:/Users/nekilic/Desktop/46/hazard/Register_simple.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_file.v
+    Info (12023): Found entity 1: Register_file File: C:/Users/nekilic/Desktop/46/hazard/Register_file.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_16to1.v
+    Info (12023): Found entity 1: Mux_16to1 File: C:/Users/nekilic/Desktop/46/hazard/Mux_16to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4to1.v
+    Info (12023): Found entity 1: Mux_4to1 File: C:/Users/nekilic/Desktop/46/hazard/Mux_4to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2to1.v
+    Info (12023): Found entity 1: Mux_2to1 File: C:/Users/nekilic/Desktop/46/hazard/Mux_2to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memory.v
+    Info (12023): Found entity 1: Memory File: C:/Users/nekilic/Desktop/46/hazard/Memory.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_memory.v
+    Info (12023): Found entity 1: Instruction_memory File: C:/Users/nekilic/Desktop/46/hazard/Instruction_memory.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file extender.v
+    Info (12023): Found entity 1: Extender File: C:/Users/nekilic/Desktop/46/hazard/Extender.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_4to16.v
+    Info (12023): Found entity 1: Decoder_4to16 File: C:/Users/nekilic/Desktop/46/hazard/Decoder_4to16.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_2to4.v
+    Info (12023): Found entity 1: Decoder_2to4 File: C:/Users/nekilic/Desktop/46/hazard/Decoder_2to4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.bdf
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 1 design units, including 1 entities, in source file better_extender.v
+    Info (12023): Found entity 1: better_extender File: C:/Users/nekilic/Desktop/46/hazard/better_extender.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: C:/Users/nekilic/Desktop/46/hazard/ALU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: Adder File: C:/Users/nekilic/Desktop/46/hazard/Adder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hazardunitv.v
+    Info (12023): Found entity 1: HazardUnit File: C:/Users/nekilic/Desktop/46/hazard/HazardUnitv.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controller.v
+    Info (12023): Found entity 1: controller File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(24): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/nekilic/Desktop/46/hazard/ALU.v Line: 24
+Warning (10222): Verilog HDL Parameter Declaration warning at shifter.v(13): Parameter Declaration in module "shifter" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/nekilic/Desktop/46/hazard/shifter.v Line: 13
+Info (12127): Elaborating entity "hazard" for the top level hierarchy
+Info (12128): Elaborating entity "dpath" for hierarchy "dpath:dp" File: C:/Users/nekilic/Desktop/46/hazard/hazard.v Line: 137
+Warning (10230): Verilog HDL assignment warning at dpath.v(137): truncated value with size 64 to match size of target (32) File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 137
+Warning (10230): Verilog HDL assignment warning at dpath.v(148): truncated value with size 64 to match size of target (32) File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 148
+Info (12128): Elaborating entity "Register_sync_rw" for hierarchy "dpath:dp|Register_sync_rw:PC_REG" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 79
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "dpath:dp|Mux_2to1:PC_INPUT_MUX" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 80
+Info (12128): Elaborating entity "Adder" for hierarchy "dpath:dp|Adder:PC_ADDER" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 84
+Info (12128): Elaborating entity "Instruction_memory" for hierarchy "dpath:dp|Instruction_memory:INST_MEM" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 85
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "dpath:dp|Mux_2to1:A1_MUX" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 90
+Info (12128): Elaborating entity "Register_file" for hierarchy "dpath:dp|Register_file:REG_FILE" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 92
+Warning (10030): Net "Reg_Out[15]" at Register_file.v(27) has no driver or initial value, using a default initial value '0' File: C:/Users/nekilic/Desktop/46/hazard/Register_file.v Line: 27
+Info (12128): Elaborating entity "Decoder_4to16" for hierarchy "dpath:dp|Register_file:REG_FILE|Decoder_4to16:dec" File: C:/Users/nekilic/Desktop/46/hazard/Register_file.v Line: 52
+Info (12128): Elaborating entity "Mux_16to1" for hierarchy "dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_0" File: C:/Users/nekilic/Desktop/46/hazard/Register_file.v Line: 72
+Info (12128): Elaborating entity "better_extender" for hierarchy "dpath:dp|better_extender:EXTENDER" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 93
+Info (12128): Elaborating entity "Extender" for hierarchy "dpath:dp|better_extender:EXTENDER|Extender:worse_extender" File: C:/Users/nekilic/Desktop/46/hazard/better_extender.v Line: 8
+Info (12128): Elaborating entity "Register_simple" for hierarchy "dpath:dp|Register_simple:DECODE_REG0" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 94
+Info (12128): Elaborating entity "Register_simple" for hierarchy "dpath:dp|Register_simple:DECODE_REG2" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 96
+Info (12128): Elaborating entity "Mux_4to1" for hierarchy "dpath:dp|Mux_4to1:FORWARD_MUX_A" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 102
+Info (12128): Elaborating entity "ALU" for hierarchy "dpath:dp|ALU:ALU_MODULE" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 106
+Info (12128): Elaborating entity "Memory" for hierarchy "dpath:dp|Memory:MEMORY_MODULE" File: C:/Users/nekilic/Desktop/46/hazard/dpath.v Line: 116
+Info (12128): Elaborating entity "controller" for hierarchy "controller:cont" File: C:/Users/nekilic/Desktop/46/hazard/hazard.v Line: 179
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "noyan_condition", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "RegSrcD", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "MemtoRegD", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "RegWriteD", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "MemWriteD", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "ALUSrcD", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "BranchD", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "ALUControlD", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "shift_enable", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "rotate_immediate_enable", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Warning (10240): Verilog HDL Always Construct warning at controller.v(109): inferring latch(es) for variable "ImmSrcD", which holds its previous value in one or more paths through the always construct File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "ImmSrcD[0]" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "ImmSrcD[1]" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "rotate_immediate_enable" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "shift_enable" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "ALUControlD[0]" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "ALUControlD[1]" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "ALUControlD[2]" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "ALUControlD[3]" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "BranchD" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "ALUSrcD" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "MemWriteD" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "RegWriteD" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "MemtoRegD" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "RegSrcD[0]" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "RegSrcD[1]" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (10041): Inferred latch for "noyan_condition" at controller.v(109) File: C:/Users/nekilic/Desktop/46/hazard/controller.v Line: 109
+Info (12128): Elaborating entity "HazardUnit" for hierarchy "HazardUnit:hu" File: C:/Users/nekilic/Desktop/46/hazard/hazard.v Line: 205
+Warning (10036): Verilog HDL or VHDL warning at HazardUnitv.v(27): object "Match_1E_W" assigned a value but never read File: C:/Users/nekilic/Desktop/46/hazard/HazardUnitv.v Line: 27
+Warning (10036): Verilog HDL or VHDL warning at HazardUnitv.v(27): object "Match_2E_W" assigned a value but never read File: C:/Users/nekilic/Desktop/46/hazard/HazardUnitv.v Line: 27
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/nekilic/Desktop/46/hazard/hazard.v Line: 1
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/nekilic/Desktop/46/hazard/hazard.v Line: 1
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Mon Jun 12 04:15:59 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:04
+
+
