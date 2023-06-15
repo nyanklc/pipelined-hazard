@@ -157,6 +157,12 @@ def print_signals(dut, clk=None):
     print(f"{clk if clk is not None else ''} | out_1: {dut.dp.REG_FILE.out_1.value}")
     print(f"{clk if clk is not None else ''} | clk: {dut.dp.REG_FILE.clk.value}")
 
+    print("\n### MEMORY DATA ###")
+    print(f"{clk if clk is not None else ''} | mem0: {dut.mem0.value}")
+    print(f"{clk if clk is not None else ''} | mem1: {dut.mem1.value}")
+    print(f"{clk if clk is not None else ''} | mem2: {dut.mem2.value}")
+    print(f"{clk if clk is not None else ''} | mem3: {dut.mem3.value}")
+
     print("-----------------------------------------------------------------------------------")
 
 @cocotb.test()
@@ -169,7 +175,7 @@ async def test_hazard(dut):
     # print("########## INITIAL ##########")
     # print_signals(dut, 0)
 
-    for i in range(50):
+    for i in range(25):
         print(f"CLOCK {i+1}")
         await clock_pulse(dut)
         print_signals(dut, i+1)
