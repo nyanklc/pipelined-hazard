@@ -12,7 +12,7 @@ module HazardUnit(
 	input 		CondEx,
 	input 		BranchE,
 	input 		PCSrcD,
-	input			PCSrcE,
+	input		PCSrcE,
 	input 		PCSrcM,
 	input 		PCSrcW,
 

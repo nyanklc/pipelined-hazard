@@ -1,4 +1,13 @@
-module hazard(input clk, input reset);
+module hazard(
+	input clk,
+	input reset,
+	output wire [31:0] register0,
+	output wire [31:0] register1,
+	output wire [7:0] mem0,
+	output wire [7:0] mem1,
+	output wire [7:0] mem2,
+	output wire [7:0] mem3
+);
 
 // Controller inputs
 wire       PCSrcW;
@@ -39,8 +48,6 @@ wire [3:0] wa3w;
 // (for demonstration)
 wire [31:0] inst_bus;
 wire [31:0] result_wire;
-wire [31:0] register0;
-wire [31:0] register1;
 wire [31:0] register2;
 wire [31:0] register3;
 wire [31:0] register4;
@@ -138,7 +145,12 @@ dpath dp(
 	register15,
 
 	ra1d,
-	ra2d
+	ra2d,
+
+	mem0,
+	mem1,
+	mem2,
+	mem3
 );
 
 controller cont(
@@ -187,7 +199,8 @@ controller cont(
 	ra1e,
 	ra2e,
 
-	FlushE
+	FlushE,
+	FlushD
 );
 
 HazardUnit hu(
@@ -213,7 +226,7 @@ HazardUnit hu(
 	FlushD,
 	FlushE,
 	ForwardAE,
-   ForwardBE
+   	ForwardBE
 );
 
 endmodule

@@ -2,12 +2,22 @@ module Memory#(BYTE_SIZE=4, ADDR_WIDTH=32)(
 input clk,WE,
 input [ADDR_WIDTH-1:0] ADDR,
 input [(BYTE_SIZE*8)-1:0] WD,
-output [(BYTE_SIZE*8)-1:0] RD 
+output [(BYTE_SIZE*8)-1:0] RD ,
+
+output wire [7:0] mem0,
+output wire [7:0] mem1,
+output wire [7:0] mem2,
+output wire [7:0] mem3
 );
 
 // reg [7:0] mem [4095:0];
 
 reg [7:0] mem [15:0];
+
+assign mem0 = mem[0];
+assign mem1 = mem[1];
+assign mem2 = mem[2];
+assign mem3 = mem[3];
 
 initial begin
 //mem[0]<=8'h01;

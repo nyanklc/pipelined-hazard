@@ -51,7 +51,12 @@ def print_signals(dut, clk=None):
     print(f"{clk if clk is not None else ''} | ALUSrcE: {dut.ALUSrcE.value}")
     print(f"{clk if clk is not None else ''} | ImmSrcD: {dut.ImmSrcD.value}")
     print(f"{clk if clk is not None else ''} | RegSrcD: {dut.RegSrcD.value}")
+    print(f"{clk if clk is not None else ''} | FlagsE: {dut.cont.FlagsE.value}")
+    print(f"{clk if clk is not None else ''} | Cond: {dut.cont.Cond.value}")
+    print(f"{clk if clk is not None else ''} | CondE: {dut.cont.CondE.value}")
     print(f"{clk if clk is not None else ''} | CondEx: {dut.cont.CondEx.value}")
+    print(f"{clk if clk is not None else ''} | Rd: {dut.cont.Rd.value}")
+    print(f"{clk if clk is not None else ''} | prevFlushD: {dut.cont.prevFlushD.value}")
 
     print("\n### FETCH ###")
     print(f"{clk if clk is not None else ''} | branch_taken_mux_out(pc_in): {dut.dp.branch_taken_mux_out.value}")
@@ -161,8 +166,10 @@ async def test_hazard(dut):
     print_memory(dut)
     print_inst_memory(dut)
     print("\n")
+    # print("########## INITIAL ##########")
+    # print_signals(dut, 0)
 
-    for i in range(15):
+    for i in range(50):
         print(f"CLOCK {i+1}")
         await clock_pulse(dut)
         print_signals(dut, i+1)

@@ -60,7 +60,12 @@ module dpath(
 	output wire [31:0] register15,
 
 	output wire [3:0] a1_mux_out,  // ra1d
-	output wire [3:0] a2_mux_out  // ra2d
+	output wire [3:0] a2_mux_out,  // ra2d,
+
+	output wire [7:0] mem0,
+	output wire [7:0] mem1,
+	output wire [7:0] mem2,
+	output wire [7:0] mem3
 );
 
 wire [31:0] pc_out, pc_adder_out, pc_mux_out, inst_mem_out, branch_taken_mux_out;
@@ -114,7 +119,7 @@ defparam EXECUTE_REG2.WIDTH = 4;
 
 
 // memory
-Memory MEMORY_MODULE(clk, MemWriteM, alu_out_memory, forward_mux_b_out_memory, mem_out);
+Memory MEMORY_MODULE(clk, MemWriteM, alu_out_memory, forward_mux_b_out_memory, mem_out, mem0, mem1, mem2, mem3);
 Register_simple MEMORY_REG0(clk, reset, mem_out, mem_out_writeback);
 Register_simple MEMORY_REG1(clk, reset, alu_out_memory, alu_out_writeback);
 Register_simple MEMORY_REG2(clk, reset, wa3m, wa3w);
