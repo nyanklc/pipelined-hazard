@@ -1,12 +1,22 @@
 module hazard(
 	input clk,
 	input reset,
+	input wire [3:0] reg_out_select,
+	output wire [3:0] reg_out_out,
 	output wire [31:0] register0,
 	output wire [31:0] register1,
 	output wire [7:0] mem0,
 	output wire [7:0] mem1,
 	output wire [7:0] mem2,
-	output wire [7:0] mem3
+	output wire [7:0] mem3,
+
+	output wire [31:0] pc_out,
+	output wire StallF,
+	output wire StallD,
+	output wire FlushD,
+	output wire FlushE,
+	output wire [1:0] ForwardAE,
+	output wire [1:0] ForwardBE
 );
 
 // Controller inputs
@@ -22,14 +32,6 @@ wire       MemtoRegW;
 
 wire 		shift_enable;
 wire 		rotate_immediate_enable;
-
-// Hazard unit inputs
-wire 		StallF;
-wire 		StallD;
-wire 		FlushD;
-wire 		FlushE;
-wire [1:0] ForwardAE;
-wire [1:0] ForwardBE;
 
 // Outputs
 wire [1:0] Op;
@@ -150,7 +152,12 @@ dpath dp(
 	mem0,
 	mem1,
 	mem2,
-	mem3
+	mem3,
+
+	reg_out_select,
+	reg_out_out,
+
+	pc_out
 );
 
 controller cont(

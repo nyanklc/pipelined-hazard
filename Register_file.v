@@ -19,7 +19,10 @@ module Register_file #(parameter WIDTH=32)
 	  output wire [WIDTH-1:0] register12,
 	  output wire [WIDTH-1:0] register13,
 	  output wire [WIDTH-1:0] register14,
-	  output wire [WIDTH-1:0] register15
+	  output wire [WIDTH-1:0] register15,
+
+		input wire [3:0] reg_out_select,
+		output [31:0] reg_out_out
     );
 
 wire [14:0] Reg_enable;
@@ -90,5 +93,26 @@ Mux_16to1 #(WIDTH) mux_1 (.select(Source_select_1),
 	.input_15(Reg_15),
 	.output_value(out_1)
     );
+
+Mux_16to1 #(WIDTH) mux_reg_out(
+	.select(reg_out_select),
+	.input_0 (Reg_Out[0]),
+	.input_1 (Reg_Out[1]),
+	.input_2 (Reg_Out[2]),
+	.input_3 (Reg_Out[3]),
+	.input_4 (Reg_Out[4]),
+	.input_5 (Reg_Out[5]),
+	.input_6 (Reg_Out[6]),
+	.input_7 (Reg_Out[7]),
+	.input_8 (Reg_Out[8]),
+	.input_9 (Reg_Out[9]),
+	.input_10(Reg_Out[10]),
+	.input_11(Reg_Out[11]),
+	.input_12(Reg_Out[12]),
+	.input_13(Reg_Out[13]),
+	.input_14(Reg_Out[14]),
+	.input_15(Reg_15),
+	.output_value(reg_out_out)
+);
 
 endmodule

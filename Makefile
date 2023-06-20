@@ -20,6 +20,8 @@ VERILOG_SOURCES += $(PWD)/Decoder_4to16.v
 VERILOG_SOURCES += $(PWD)/Mux_16to1.v
 VERILOG_SOURCES += $(PWD)/Mux_4to1.v
 VERILOG_SOURCES += $(PWD)/Register_sync_rw.v
+VERILOG_SOURCES += $(PWD)/hexto7seg.v
+VERILOG_SOURCES += $(PWD)/DE1_SOC.v
 
 # TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
 TOPLEVEL = hazard

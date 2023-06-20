@@ -65,10 +65,15 @@ module dpath(
 	output wire [7:0] mem0,
 	output wire [7:0] mem1,
 	output wire [7:0] mem2,
-	output wire [7:0] mem3
+	output wire [7:0] mem3,
+
+	input wire [3:0] reg_out_select,
+	output [31:0] reg_out_out,
+
+	output wire [31:0] pc_out
 );
 
-wire [31:0] pc_out, pc_adder_out, pc_mux_out, inst_mem_out, branch_taken_mux_out;
+wire [31:0] pc_adder_out, pc_mux_out, inst_mem_out, branch_taken_mux_out;
 
 wire [31:0] extended_imm_out, extended_imm_out_execute;
 reg [31:0] rotated_extended_imm_out;
@@ -95,7 +100,7 @@ Register_sync_rw FETCH_REG0(clk, FlushD || reset, !StallD, inst_mem_out, inst_bu
 // decode
 Mux_2to1 A1_MUX(RegSrcD[0], inst_bus[19:16], 4'b1111, a1_mux_out);
 Mux_2to1 A2_MUX(RegSrcD[1], inst_bus[3:0], inst_bus[15:12], a2_mux_out);
-Register_file REG_FILE(clk, RegWriteW, reset, a1_mux_out, a2_mux_out, wa3w, result_wire, pc_adder_out, rd1, rd2, register0, register1, register2, register3, register4, register5, register6, register7, register8, register9, register10, register11, register12, register13, register14, register15);
+Register_file REG_FILE(clk, RegWriteW, reset, a1_mux_out, a2_mux_out, wa3w, result_wire, pc_adder_out, rd1, rd2, register0, register1, register2, register3, register4, register5, register6, register7, register8, register9, register10, register11, register12, register13, register14, register15, reg_out_select, reg_out_out);
 better_extender EXTENDER(inst_bus[23:0], ImmSrcD, extended_imm_out);
 Register_simple DECODE_REG0(clk, (FlushE || reset), rd1, rd1_execute);
 Register_simple DECODE_REG1(clk, (FlushE || reset), shifted_rd2, rd2_execute);
