@@ -1,9 +1,278 @@
-|hazard
+|DE1_SOC
+HEX0[0] << hexto7seg:hex_0.hexn
+HEX0[1] << hexto7seg:hex_0.hexn
+HEX0[2] << hexto7seg:hex_0.hexn
+HEX0[3] << hexto7seg:hex_0.hexn
+HEX0[4] << hexto7seg:hex_0.hexn
+HEX0[5] << hexto7seg:hex_0.hexn
+HEX0[6] << hexto7seg:hex_0.hexn
+HEX1[0] << hexto7seg:hex_1.hexn
+HEX1[1] << hexto7seg:hex_1.hexn
+HEX1[2] << hexto7seg:hex_1.hexn
+HEX1[3] << hexto7seg:hex_1.hexn
+HEX1[4] << hexto7seg:hex_1.hexn
+HEX1[5] << hexto7seg:hex_1.hexn
+HEX1[6] << hexto7seg:hex_1.hexn
+HEX2[0] << <VCC>
+HEX2[1] << <VCC>
+HEX2[2] << <VCC>
+HEX2[3] << <VCC>
+HEX2[4] << <VCC>
+HEX2[5] << <VCC>
+HEX2[6] << <VCC>
+HEX3[0] << <VCC>
+HEX3[1] << <VCC>
+HEX3[2] << <VCC>
+HEX3[3] << <VCC>
+HEX3[4] << <VCC>
+HEX3[5] << <VCC>
+HEX3[6] << <VCC>
+HEX4[0] << hexto7seg:hex_4.hexn
+HEX4[1] << hexto7seg:hex_4.hexn
+HEX4[2] << hexto7seg:hex_4.hexn
+HEX4[3] << hexto7seg:hex_4.hexn
+HEX4[4] << hexto7seg:hex_4.hexn
+HEX4[5] << hexto7seg:hex_4.hexn
+HEX4[6] << hexto7seg:hex_4.hexn
+HEX5[0] << hexto7seg:hex_5.hexn
+HEX5[1] << hexto7seg:hex_5.hexn
+HEX5[2] << hexto7seg:hex_5.hexn
+HEX5[3] << hexto7seg:hex_5.hexn
+HEX5[4] << hexto7seg:hex_5.hexn
+HEX5[5] << hexto7seg:hex_5.hexn
+HEX5[6] << hexto7seg:hex_5.hexn
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+LEDR[0] << hazard:my_computer.port14
+LEDR[1] << hazard:my_computer.port13
+LEDR[2] << hazard:my_computer.port12
+LEDR[3] << hazard:my_computer.port11
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+
+
+|DE1_SOC|hexto7seg:hex_0
+hexn[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hexn[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hexn[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hexn[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hexn[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hexn[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hexn[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+
+
+|DE1_SOC|hexto7seg:hex_1
+hexn[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hexn[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hexn[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hexn[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hexn[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hexn[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hexn[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+
+
+|DE1_SOC|hexto7seg:hex_4
+hexn[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hexn[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hexn[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hexn[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hexn[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hexn[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hexn[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+
+
+|DE1_SOC|hexto7seg:hex_5
+hexn[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hexn[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hexn[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hexn[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hexn[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hexn[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hexn[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+
+
+|DE1_SOC|hazard:my_computer
 clk => clk.IN2
 reset => reset.IN2
+reg_out_select[0] => reg_out_select[0].IN1
+reg_out_select[1] => reg_out_select[1].IN1
+reg_out_select[2] => reg_out_select[2].IN1
+reg_out_select[3] => reg_out_select[3].IN1
+reg_out_out[0] <= dpath:dp.port56
+reg_out_out[1] <= dpath:dp.port56
+reg_out_out[2] <= dpath:dp.port56
+reg_out_out[3] <= dpath:dp.port56
+register0[0] <= dpath:dp.port33
+register0[1] <= dpath:dp.port33
+register0[2] <= dpath:dp.port33
+register0[3] <= dpath:dp.port33
+register0[4] <= dpath:dp.port33
+register0[5] <= dpath:dp.port33
+register0[6] <= dpath:dp.port33
+register0[7] <= dpath:dp.port33
+register0[8] <= dpath:dp.port33
+register0[9] <= dpath:dp.port33
+register0[10] <= dpath:dp.port33
+register0[11] <= dpath:dp.port33
+register0[12] <= dpath:dp.port33
+register0[13] <= dpath:dp.port33
+register0[14] <= dpath:dp.port33
+register0[15] <= dpath:dp.port33
+register0[16] <= dpath:dp.port33
+register0[17] <= dpath:dp.port33
+register0[18] <= dpath:dp.port33
+register0[19] <= dpath:dp.port33
+register0[20] <= dpath:dp.port33
+register0[21] <= dpath:dp.port33
+register0[22] <= dpath:dp.port33
+register0[23] <= dpath:dp.port33
+register0[24] <= dpath:dp.port33
+register0[25] <= dpath:dp.port33
+register0[26] <= dpath:dp.port33
+register0[27] <= dpath:dp.port33
+register0[28] <= dpath:dp.port33
+register0[29] <= dpath:dp.port33
+register0[30] <= dpath:dp.port33
+register0[31] <= dpath:dp.port33
+register1[0] <= dpath:dp.port34
+register1[1] <= dpath:dp.port34
+register1[2] <= dpath:dp.port34
+register1[3] <= dpath:dp.port34
+register1[4] <= dpath:dp.port34
+register1[5] <= dpath:dp.port34
+register1[6] <= dpath:dp.port34
+register1[7] <= dpath:dp.port34
+register1[8] <= dpath:dp.port34
+register1[9] <= dpath:dp.port34
+register1[10] <= dpath:dp.port34
+register1[11] <= dpath:dp.port34
+register1[12] <= dpath:dp.port34
+register1[13] <= dpath:dp.port34
+register1[14] <= dpath:dp.port34
+register1[15] <= dpath:dp.port34
+register1[16] <= dpath:dp.port34
+register1[17] <= dpath:dp.port34
+register1[18] <= dpath:dp.port34
+register1[19] <= dpath:dp.port34
+register1[20] <= dpath:dp.port34
+register1[21] <= dpath:dp.port34
+register1[22] <= dpath:dp.port34
+register1[23] <= dpath:dp.port34
+register1[24] <= dpath:dp.port34
+register1[25] <= dpath:dp.port34
+register1[26] <= dpath:dp.port34
+register1[27] <= dpath:dp.port34
+register1[28] <= dpath:dp.port34
+register1[29] <= dpath:dp.port34
+register1[30] <= dpath:dp.port34
+register1[31] <= dpath:dp.port34
+mem0[0] <= dpath:dp.port51
+mem0[1] <= dpath:dp.port51
+mem0[2] <= dpath:dp.port51
+mem0[3] <= dpath:dp.port51
+mem0[4] <= dpath:dp.port51
+mem0[5] <= dpath:dp.port51
+mem0[6] <= dpath:dp.port51
+mem0[7] <= dpath:dp.port51
+mem1[0] <= dpath:dp.port52
+mem1[1] <= dpath:dp.port52
+mem1[2] <= dpath:dp.port52
+mem1[3] <= dpath:dp.port52
+mem1[4] <= dpath:dp.port52
+mem1[5] <= dpath:dp.port52
+mem1[6] <= dpath:dp.port52
+mem1[7] <= dpath:dp.port52
+mem2[0] <= dpath:dp.port53
+mem2[1] <= dpath:dp.port53
+mem2[2] <= dpath:dp.port53
+mem2[3] <= dpath:dp.port53
+mem2[4] <= dpath:dp.port53
+mem2[5] <= dpath:dp.port53
+mem2[6] <= dpath:dp.port53
+mem2[7] <= dpath:dp.port53
+mem3[0] <= dpath:dp.port54
+mem3[1] <= dpath:dp.port54
+mem3[2] <= dpath:dp.port54
+mem3[3] <= dpath:dp.port54
+mem3[4] <= dpath:dp.port54
+mem3[5] <= dpath:dp.port54
+mem3[6] <= dpath:dp.port54
+mem3[7] <= dpath:dp.port54
+pc_out[0] <= dpath:dp.port57
+pc_out[1] <= dpath:dp.port57
+pc_out[2] <= dpath:dp.port57
+pc_out[3] <= dpath:dp.port57
+pc_out[4] <= dpath:dp.port57
+pc_out[5] <= dpath:dp.port57
+pc_out[6] <= dpath:dp.port57
+pc_out[7] <= dpath:dp.port57
+pc_out[8] <= dpath:dp.port57
+pc_out[9] <= dpath:dp.port57
+pc_out[10] <= dpath:dp.port57
+pc_out[11] <= dpath:dp.port57
+pc_out[12] <= dpath:dp.port57
+pc_out[13] <= dpath:dp.port57
+pc_out[14] <= dpath:dp.port57
+pc_out[15] <= dpath:dp.port57
+pc_out[16] <= dpath:dp.port57
+pc_out[17] <= dpath:dp.port57
+pc_out[18] <= dpath:dp.port57
+pc_out[19] <= dpath:dp.port57
+pc_out[20] <= dpath:dp.port57
+pc_out[21] <= dpath:dp.port57
+pc_out[22] <= dpath:dp.port57
+pc_out[23] <= dpath:dp.port57
+pc_out[24] <= dpath:dp.port57
+pc_out[25] <= dpath:dp.port57
+pc_out[26] <= dpath:dp.port57
+pc_out[27] <= dpath:dp.port57
+pc_out[28] <= dpath:dp.port57
+pc_out[29] <= dpath:dp.port57
+pc_out[30] <= dpath:dp.port57
+pc_out[31] <= dpath:dp.port57
+StallF <= StallF.DB_MAX_OUTPUT_PORT_TYPE
+StallD <= StallD.DB_MAX_OUTPUT_PORT_TYPE
+FlushD <= FlushD.DB_MAX_OUTPUT_PORT_TYPE
+FlushE <= FlushE.DB_MAX_OUTPUT_PORT_TYPE
+ForwardAE[0] <= ForwardAE[0].DB_MAX_OUTPUT_PORT_TYPE
+ForwardAE[1] <= ForwardAE[1].DB_MAX_OUTPUT_PORT_TYPE
+ForwardBE[0] <= ForwardBE[0].DB_MAX_OUTPUT_PORT_TYPE
+ForwardBE[1] <= ForwardBE[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp
+|DE1_SOC|hazard:my_computer|dpath:dp
 clk => clk.IN14
 reset => reset.IN8
 PCSrcW => PCSrcW.IN1
@@ -831,9 +1100,117 @@ register15[28] <= Register_file:REG_FILE.port25
 register15[29] <= Register_file:REG_FILE.port25
 register15[30] <= Register_file:REG_FILE.port25
 register15[31] <= Register_file:REG_FILE.port25
+a1_mux_out[0] <= a1_mux_out[0].DB_MAX_OUTPUT_PORT_TYPE
+a1_mux_out[1] <= a1_mux_out[1].DB_MAX_OUTPUT_PORT_TYPE
+a1_mux_out[2] <= a1_mux_out[2].DB_MAX_OUTPUT_PORT_TYPE
+a1_mux_out[3] <= a1_mux_out[3].DB_MAX_OUTPUT_PORT_TYPE
+a2_mux_out[0] <= a2_mux_out[0].DB_MAX_OUTPUT_PORT_TYPE
+a2_mux_out[1] <= a2_mux_out[1].DB_MAX_OUTPUT_PORT_TYPE
+a2_mux_out[2] <= a2_mux_out[2].DB_MAX_OUTPUT_PORT_TYPE
+a2_mux_out[3] <= a2_mux_out[3].DB_MAX_OUTPUT_PORT_TYPE
+mem0[0] <= Memory:MEMORY_MODULE.port5
+mem0[1] <= Memory:MEMORY_MODULE.port5
+mem0[2] <= Memory:MEMORY_MODULE.port5
+mem0[3] <= Memory:MEMORY_MODULE.port5
+mem0[4] <= Memory:MEMORY_MODULE.port5
+mem0[5] <= Memory:MEMORY_MODULE.port5
+mem0[6] <= Memory:MEMORY_MODULE.port5
+mem0[7] <= Memory:MEMORY_MODULE.port5
+mem1[0] <= Memory:MEMORY_MODULE.port6
+mem1[1] <= Memory:MEMORY_MODULE.port6
+mem1[2] <= Memory:MEMORY_MODULE.port6
+mem1[3] <= Memory:MEMORY_MODULE.port6
+mem1[4] <= Memory:MEMORY_MODULE.port6
+mem1[5] <= Memory:MEMORY_MODULE.port6
+mem1[6] <= Memory:MEMORY_MODULE.port6
+mem1[7] <= Memory:MEMORY_MODULE.port6
+mem2[0] <= Memory:MEMORY_MODULE.port7
+mem2[1] <= Memory:MEMORY_MODULE.port7
+mem2[2] <= Memory:MEMORY_MODULE.port7
+mem2[3] <= Memory:MEMORY_MODULE.port7
+mem2[4] <= Memory:MEMORY_MODULE.port7
+mem2[5] <= Memory:MEMORY_MODULE.port7
+mem2[6] <= Memory:MEMORY_MODULE.port7
+mem2[7] <= Memory:MEMORY_MODULE.port7
+mem3[0] <= Memory:MEMORY_MODULE.port8
+mem3[1] <= Memory:MEMORY_MODULE.port8
+mem3[2] <= Memory:MEMORY_MODULE.port8
+mem3[3] <= Memory:MEMORY_MODULE.port8
+mem3[4] <= Memory:MEMORY_MODULE.port8
+mem3[5] <= Memory:MEMORY_MODULE.port8
+mem3[6] <= Memory:MEMORY_MODULE.port8
+mem3[7] <= Memory:MEMORY_MODULE.port8
+reg_out_select[0] => reg_out_select[0].IN1
+reg_out_select[1] => reg_out_select[1].IN1
+reg_out_select[2] => reg_out_select[2].IN1
+reg_out_select[3] => reg_out_select[3].IN1
+reg_out_out[0] <= Register_file:REG_FILE.port27
+reg_out_out[1] <= Register_file:REG_FILE.port27
+reg_out_out[2] <= Register_file:REG_FILE.port27
+reg_out_out[3] <= Register_file:REG_FILE.port27
+reg_out_out[4] <= Register_file:REG_FILE.port27
+reg_out_out[5] <= Register_file:REG_FILE.port27
+reg_out_out[6] <= Register_file:REG_FILE.port27
+reg_out_out[7] <= Register_file:REG_FILE.port27
+reg_out_out[8] <= Register_file:REG_FILE.port27
+reg_out_out[9] <= Register_file:REG_FILE.port27
+reg_out_out[10] <= Register_file:REG_FILE.port27
+reg_out_out[11] <= Register_file:REG_FILE.port27
+reg_out_out[12] <= Register_file:REG_FILE.port27
+reg_out_out[13] <= Register_file:REG_FILE.port27
+reg_out_out[14] <= Register_file:REG_FILE.port27
+reg_out_out[15] <= Register_file:REG_FILE.port27
+reg_out_out[16] <= Register_file:REG_FILE.port27
+reg_out_out[17] <= Register_file:REG_FILE.port27
+reg_out_out[18] <= Register_file:REG_FILE.port27
+reg_out_out[19] <= Register_file:REG_FILE.port27
+reg_out_out[20] <= Register_file:REG_FILE.port27
+reg_out_out[21] <= Register_file:REG_FILE.port27
+reg_out_out[22] <= Register_file:REG_FILE.port27
+reg_out_out[23] <= Register_file:REG_FILE.port27
+reg_out_out[24] <= Register_file:REG_FILE.port27
+reg_out_out[25] <= Register_file:REG_FILE.port27
+reg_out_out[26] <= Register_file:REG_FILE.port27
+reg_out_out[27] <= Register_file:REG_FILE.port27
+reg_out_out[28] <= Register_file:REG_FILE.port27
+reg_out_out[29] <= Register_file:REG_FILE.port27
+reg_out_out[30] <= Register_file:REG_FILE.port27
+reg_out_out[31] <= Register_file:REG_FILE.port27
+pc_out[0] <= pc_out[0].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[1] <= pc_out[1].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[2] <= pc_out[2].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[3] <= pc_out[3].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[4] <= pc_out[4].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[5] <= pc_out[5].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[6] <= pc_out[6].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[7] <= pc_out[7].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[8] <= pc_out[8].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[9] <= pc_out[9].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[10] <= pc_out[10].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[11] <= pc_out[11].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[12] <= pc_out[12].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[13] <= pc_out[13].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[14] <= pc_out[14].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[15] <= pc_out[15].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[16] <= pc_out[16].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[17] <= pc_out[17].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[18] <= pc_out[18].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[19] <= pc_out[19].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[20] <= pc_out[20].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[21] <= pc_out[21].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[22] <= pc_out[22].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[23] <= pc_out[23].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[24] <= pc_out[24].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[25] <= pc_out[25].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[26] <= pc_out[26].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[27] <= pc_out[27].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[28] <= pc_out[28].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[29] <= pc_out[29].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[30] <= pc_out[30].DB_MAX_OUTPUT_PORT_TYPE
+pc_out[31] <= pc_out[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_sync_rw:PC_REG
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:PC_REG
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -996,7 +1373,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Mux_2to1:PC_INPUT_MUX
+|DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:PC_INPUT_MUX
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
@@ -1127,7 +1504,7 @@ output_value[30] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 output_value[31] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Mux_2to1:BRANCH_TAKEN_MUX
+|DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:BRANCH_TAKEN_MUX
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
@@ -1258,7 +1635,7 @@ output_value[30] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 output_value[31] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Adder:PC_ADDER
+|DE1_SOC|hazard:my_computer|dpath:dp|Adder:PC_ADDER
 DATA_A[0] => Add0.IN32
 DATA_A[1] => Add0.IN31
 DATA_A[2] => Add0.IN30
@@ -1357,7 +1734,7 @@ OUT[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Instruction_memory:INST_MEM
+|DE1_SOC|hazard:my_computer|dpath:dp|Instruction_memory:INST_MEM
 ADDR[0] => Mux0.IN263
 ADDR[0] => Mux1.IN263
 ADDR[0] => Mux2.IN263
@@ -1559,7 +1936,7 @@ RD[30] <= Mux25.DB_MAX_OUTPUT_PORT_TYPE
 RD[31] <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_sync_rw:FETCH_REG0
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -1722,7 +2099,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Mux_2to1:A1_MUX
+|DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:A1_MUX
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
@@ -1741,7 +2118,7 @@ output_value[2] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 output_value[3] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Mux_2to1:A2_MUX
+|DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:A2_MUX
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
@@ -1760,7 +2137,7 @@ output_value[2] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 output_value[3] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE
 clk => _.IN1
 clk => _.IN1
 clk => _.IN1
@@ -1791,21 +2168,7 @@ write_enable => comb.IN1
 write_enable => comb.IN1
 write_enable => comb.IN1
 write_enable => comb.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
+reset => reset.IN15
 Source_select_0[0] => Source_select_0[0].IN1
 Source_select_0[1] => Source_select_0[1].IN1
 Source_select_0[2] => Source_select_0[2].IN1
@@ -1850,38 +2213,38 @@ DATA[28] => DATA[28].IN15
 DATA[29] => DATA[29].IN15
 DATA[30] => DATA[30].IN15
 DATA[31] => DATA[31].IN15
-Reg_15[0] => Reg_15[0].IN2
-Reg_15[1] => Reg_15[1].IN2
-Reg_15[2] => Reg_15[2].IN2
-Reg_15[3] => Reg_15[3].IN2
-Reg_15[4] => Reg_15[4].IN2
-Reg_15[5] => Reg_15[5].IN2
-Reg_15[6] => Reg_15[6].IN2
-Reg_15[7] => Reg_15[7].IN2
-Reg_15[8] => Reg_15[8].IN2
-Reg_15[9] => Reg_15[9].IN2
-Reg_15[10] => Reg_15[10].IN2
-Reg_15[11] => Reg_15[11].IN2
-Reg_15[12] => Reg_15[12].IN2
-Reg_15[13] => Reg_15[13].IN2
-Reg_15[14] => Reg_15[14].IN2
-Reg_15[15] => Reg_15[15].IN2
-Reg_15[16] => Reg_15[16].IN2
-Reg_15[17] => Reg_15[17].IN2
-Reg_15[18] => Reg_15[18].IN2
-Reg_15[19] => Reg_15[19].IN2
-Reg_15[20] => Reg_15[20].IN2
-Reg_15[21] => Reg_15[21].IN2
-Reg_15[22] => Reg_15[22].IN2
-Reg_15[23] => Reg_15[23].IN2
-Reg_15[24] => Reg_15[24].IN2
-Reg_15[25] => Reg_15[25].IN2
-Reg_15[26] => Reg_15[26].IN2
-Reg_15[27] => Reg_15[27].IN2
-Reg_15[28] => Reg_15[28].IN2
-Reg_15[29] => Reg_15[29].IN2
-Reg_15[30] => Reg_15[30].IN2
-Reg_15[31] => Reg_15[31].IN2
+Reg_15[0] => Reg_15[0].IN3
+Reg_15[1] => Reg_15[1].IN3
+Reg_15[2] => Reg_15[2].IN3
+Reg_15[3] => Reg_15[3].IN3
+Reg_15[4] => Reg_15[4].IN3
+Reg_15[5] => Reg_15[5].IN3
+Reg_15[6] => Reg_15[6].IN3
+Reg_15[7] => Reg_15[7].IN3
+Reg_15[8] => Reg_15[8].IN3
+Reg_15[9] => Reg_15[9].IN3
+Reg_15[10] => Reg_15[10].IN3
+Reg_15[11] => Reg_15[11].IN3
+Reg_15[12] => Reg_15[12].IN3
+Reg_15[13] => Reg_15[13].IN3
+Reg_15[14] => Reg_15[14].IN3
+Reg_15[15] => Reg_15[15].IN3
+Reg_15[16] => Reg_15[16].IN3
+Reg_15[17] => Reg_15[17].IN3
+Reg_15[18] => Reg_15[18].IN3
+Reg_15[19] => Reg_15[19].IN3
+Reg_15[20] => Reg_15[20].IN3
+Reg_15[21] => Reg_15[21].IN3
+Reg_15[22] => Reg_15[22].IN3
+Reg_15[23] => Reg_15[23].IN3
+Reg_15[24] => Reg_15[24].IN3
+Reg_15[25] => Reg_15[25].IN3
+Reg_15[26] => Reg_15[26].IN3
+Reg_15[27] => Reg_15[27].IN3
+Reg_15[28] => Reg_15[28].IN3
+Reg_15[29] => Reg_15[29].IN3
+Reg_15[30] => Reg_15[30].IN3
+Reg_15[31] => Reg_15[31].IN3
 out_0[0] <= Mux_16to1:mux_0.output_value
 out_0[1] <= Mux_16to1:mux_0.output_value
 out_0[2] <= Mux_16to1:mux_0.output_value
@@ -2458,9 +2821,45 @@ register15[28] <= <GND>
 register15[29] <= <GND>
 register15[30] <= <GND>
 register15[31] <= <GND>
+reg_out_select[0] => reg_out_select[0].IN1
+reg_out_select[1] => reg_out_select[1].IN1
+reg_out_select[2] => reg_out_select[2].IN1
+reg_out_select[3] => reg_out_select[3].IN1
+reg_out_out[0] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[1] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[2] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[3] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[4] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[5] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[6] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[7] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[8] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[9] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[10] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[11] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[12] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[13] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[14] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[15] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[16] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[17] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[18] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[19] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[20] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[21] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[22] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[23] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[24] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[25] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[26] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[27] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[28] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[29] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[30] <= Mux_16to1:mux_reg_out.output_value
+reg_out_out[31] <= Mux_16to1:mux_reg_out.output_value
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[0].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[0].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -2623,7 +3022,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[1].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[1].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -2786,7 +3185,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[2].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[2].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -2949,7 +3348,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[3].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[3].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -3112,7 +3511,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[4].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[4].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -3275,7 +3674,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[5].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[5].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -3438,7 +3837,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[6].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[6].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -3601,7 +4000,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[7].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[7].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -3764,7 +4163,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[8].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[8].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -3927,7 +4326,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[9].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[9].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -4090,7 +4489,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[10].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[10].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -4253,7 +4652,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[11].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[11].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -4416,7 +4815,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[12].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[12].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -4579,7 +4978,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[13].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[13].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -4742,7 +5141,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[14].Reg
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[14].Reg
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -4905,7 +5304,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Decoder_4to16:dec
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Decoder_4to16:dec
 IN[0] => Decoder0.IN3
 IN[1] => Decoder0.IN2
 IN[2] => Decoder0.IN1
@@ -4928,7 +5327,7 @@ OUT[14] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[15] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_0
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_0
 select[0] => Mux0.IN3
 select[0] => Mux1.IN3
 select[0] => Mux2.IN3
@@ -5603,7 +6002,7 @@ output_value[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 output_value[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_1
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_1
 select[0] => Mux0.IN3
 select[0] => Mux1.IN3
 select[0] => Mux2.IN3
@@ -6278,7 +6677,682 @@ output_value[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 output_value[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|better_extender:EXTENDER
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_reg_out
+select[0] => Mux0.IN3
+select[0] => Mux1.IN3
+select[0] => Mux2.IN3
+select[0] => Mux3.IN3
+select[0] => Mux4.IN3
+select[0] => Mux5.IN3
+select[0] => Mux6.IN3
+select[0] => Mux7.IN3
+select[0] => Mux8.IN3
+select[0] => Mux9.IN3
+select[0] => Mux10.IN3
+select[0] => Mux11.IN3
+select[0] => Mux12.IN3
+select[0] => Mux13.IN3
+select[0] => Mux14.IN3
+select[0] => Mux15.IN3
+select[0] => Mux16.IN3
+select[0] => Mux17.IN3
+select[0] => Mux18.IN3
+select[0] => Mux19.IN3
+select[0] => Mux20.IN3
+select[0] => Mux21.IN3
+select[0] => Mux22.IN3
+select[0] => Mux23.IN3
+select[0] => Mux24.IN3
+select[0] => Mux25.IN3
+select[0] => Mux26.IN3
+select[0] => Mux27.IN3
+select[0] => Mux28.IN3
+select[0] => Mux29.IN3
+select[0] => Mux30.IN3
+select[0] => Mux31.IN3
+select[1] => Mux0.IN2
+select[1] => Mux1.IN2
+select[1] => Mux2.IN2
+select[1] => Mux3.IN2
+select[1] => Mux4.IN2
+select[1] => Mux5.IN2
+select[1] => Mux6.IN2
+select[1] => Mux7.IN2
+select[1] => Mux8.IN2
+select[1] => Mux9.IN2
+select[1] => Mux10.IN2
+select[1] => Mux11.IN2
+select[1] => Mux12.IN2
+select[1] => Mux13.IN2
+select[1] => Mux14.IN2
+select[1] => Mux15.IN2
+select[1] => Mux16.IN2
+select[1] => Mux17.IN2
+select[1] => Mux18.IN2
+select[1] => Mux19.IN2
+select[1] => Mux20.IN2
+select[1] => Mux21.IN2
+select[1] => Mux22.IN2
+select[1] => Mux23.IN2
+select[1] => Mux24.IN2
+select[1] => Mux25.IN2
+select[1] => Mux26.IN2
+select[1] => Mux27.IN2
+select[1] => Mux28.IN2
+select[1] => Mux29.IN2
+select[1] => Mux30.IN2
+select[1] => Mux31.IN2
+select[2] => Mux0.IN1
+select[2] => Mux1.IN1
+select[2] => Mux2.IN1
+select[2] => Mux3.IN1
+select[2] => Mux4.IN1
+select[2] => Mux5.IN1
+select[2] => Mux6.IN1
+select[2] => Mux7.IN1
+select[2] => Mux8.IN1
+select[2] => Mux9.IN1
+select[2] => Mux10.IN1
+select[2] => Mux11.IN1
+select[2] => Mux12.IN1
+select[2] => Mux13.IN1
+select[2] => Mux14.IN1
+select[2] => Mux15.IN1
+select[2] => Mux16.IN1
+select[2] => Mux17.IN1
+select[2] => Mux18.IN1
+select[2] => Mux19.IN1
+select[2] => Mux20.IN1
+select[2] => Mux21.IN1
+select[2] => Mux22.IN1
+select[2] => Mux23.IN1
+select[2] => Mux24.IN1
+select[2] => Mux25.IN1
+select[2] => Mux26.IN1
+select[2] => Mux27.IN1
+select[2] => Mux28.IN1
+select[2] => Mux29.IN1
+select[2] => Mux30.IN1
+select[2] => Mux31.IN1
+select[3] => Mux0.IN0
+select[3] => Mux1.IN0
+select[3] => Mux2.IN0
+select[3] => Mux3.IN0
+select[3] => Mux4.IN0
+select[3] => Mux5.IN0
+select[3] => Mux6.IN0
+select[3] => Mux7.IN0
+select[3] => Mux8.IN0
+select[3] => Mux9.IN0
+select[3] => Mux10.IN0
+select[3] => Mux11.IN0
+select[3] => Mux12.IN0
+select[3] => Mux13.IN0
+select[3] => Mux14.IN0
+select[3] => Mux15.IN0
+select[3] => Mux16.IN0
+select[3] => Mux17.IN0
+select[3] => Mux18.IN0
+select[3] => Mux19.IN0
+select[3] => Mux20.IN0
+select[3] => Mux21.IN0
+select[3] => Mux22.IN0
+select[3] => Mux23.IN0
+select[3] => Mux24.IN0
+select[3] => Mux25.IN0
+select[3] => Mux26.IN0
+select[3] => Mux27.IN0
+select[3] => Mux28.IN0
+select[3] => Mux29.IN0
+select[3] => Mux30.IN0
+select[3] => Mux31.IN0
+input_0[0] => Mux31.IN4
+input_0[1] => Mux30.IN4
+input_0[2] => Mux29.IN4
+input_0[3] => Mux28.IN4
+input_0[4] => Mux27.IN4
+input_0[5] => Mux26.IN4
+input_0[6] => Mux25.IN4
+input_0[7] => Mux24.IN4
+input_0[8] => Mux23.IN4
+input_0[9] => Mux22.IN4
+input_0[10] => Mux21.IN4
+input_0[11] => Mux20.IN4
+input_0[12] => Mux19.IN4
+input_0[13] => Mux18.IN4
+input_0[14] => Mux17.IN4
+input_0[15] => Mux16.IN4
+input_0[16] => Mux15.IN4
+input_0[17] => Mux14.IN4
+input_0[18] => Mux13.IN4
+input_0[19] => Mux12.IN4
+input_0[20] => Mux11.IN4
+input_0[21] => Mux10.IN4
+input_0[22] => Mux9.IN4
+input_0[23] => Mux8.IN4
+input_0[24] => Mux7.IN4
+input_0[25] => Mux6.IN4
+input_0[26] => Mux5.IN4
+input_0[27] => Mux4.IN4
+input_0[28] => Mux3.IN4
+input_0[29] => Mux2.IN4
+input_0[30] => Mux1.IN4
+input_0[31] => Mux0.IN4
+input_1[0] => Mux31.IN5
+input_1[1] => Mux30.IN5
+input_1[2] => Mux29.IN5
+input_1[3] => Mux28.IN5
+input_1[4] => Mux27.IN5
+input_1[5] => Mux26.IN5
+input_1[6] => Mux25.IN5
+input_1[7] => Mux24.IN5
+input_1[8] => Mux23.IN5
+input_1[9] => Mux22.IN5
+input_1[10] => Mux21.IN5
+input_1[11] => Mux20.IN5
+input_1[12] => Mux19.IN5
+input_1[13] => Mux18.IN5
+input_1[14] => Mux17.IN5
+input_1[15] => Mux16.IN5
+input_1[16] => Mux15.IN5
+input_1[17] => Mux14.IN5
+input_1[18] => Mux13.IN5
+input_1[19] => Mux12.IN5
+input_1[20] => Mux11.IN5
+input_1[21] => Mux10.IN5
+input_1[22] => Mux9.IN5
+input_1[23] => Mux8.IN5
+input_1[24] => Mux7.IN5
+input_1[25] => Mux6.IN5
+input_1[26] => Mux5.IN5
+input_1[27] => Mux4.IN5
+input_1[28] => Mux3.IN5
+input_1[29] => Mux2.IN5
+input_1[30] => Mux1.IN5
+input_1[31] => Mux0.IN5
+input_2[0] => Mux31.IN6
+input_2[1] => Mux30.IN6
+input_2[2] => Mux29.IN6
+input_2[3] => Mux28.IN6
+input_2[4] => Mux27.IN6
+input_2[5] => Mux26.IN6
+input_2[6] => Mux25.IN6
+input_2[7] => Mux24.IN6
+input_2[8] => Mux23.IN6
+input_2[9] => Mux22.IN6
+input_2[10] => Mux21.IN6
+input_2[11] => Mux20.IN6
+input_2[12] => Mux19.IN6
+input_2[13] => Mux18.IN6
+input_2[14] => Mux17.IN6
+input_2[15] => Mux16.IN6
+input_2[16] => Mux15.IN6
+input_2[17] => Mux14.IN6
+input_2[18] => Mux13.IN6
+input_2[19] => Mux12.IN6
+input_2[20] => Mux11.IN6
+input_2[21] => Mux10.IN6
+input_2[22] => Mux9.IN6
+input_2[23] => Mux8.IN6
+input_2[24] => Mux7.IN6
+input_2[25] => Mux6.IN6
+input_2[26] => Mux5.IN6
+input_2[27] => Mux4.IN6
+input_2[28] => Mux3.IN6
+input_2[29] => Mux2.IN6
+input_2[30] => Mux1.IN6
+input_2[31] => Mux0.IN6
+input_3[0] => Mux31.IN7
+input_3[1] => Mux30.IN7
+input_3[2] => Mux29.IN7
+input_3[3] => Mux28.IN7
+input_3[4] => Mux27.IN7
+input_3[5] => Mux26.IN7
+input_3[6] => Mux25.IN7
+input_3[7] => Mux24.IN7
+input_3[8] => Mux23.IN7
+input_3[9] => Mux22.IN7
+input_3[10] => Mux21.IN7
+input_3[11] => Mux20.IN7
+input_3[12] => Mux19.IN7
+input_3[13] => Mux18.IN7
+input_3[14] => Mux17.IN7
+input_3[15] => Mux16.IN7
+input_3[16] => Mux15.IN7
+input_3[17] => Mux14.IN7
+input_3[18] => Mux13.IN7
+input_3[19] => Mux12.IN7
+input_3[20] => Mux11.IN7
+input_3[21] => Mux10.IN7
+input_3[22] => Mux9.IN7
+input_3[23] => Mux8.IN7
+input_3[24] => Mux7.IN7
+input_3[25] => Mux6.IN7
+input_3[26] => Mux5.IN7
+input_3[27] => Mux4.IN7
+input_3[28] => Mux3.IN7
+input_3[29] => Mux2.IN7
+input_3[30] => Mux1.IN7
+input_3[31] => Mux0.IN7
+input_4[0] => Mux31.IN8
+input_4[1] => Mux30.IN8
+input_4[2] => Mux29.IN8
+input_4[3] => Mux28.IN8
+input_4[4] => Mux27.IN8
+input_4[5] => Mux26.IN8
+input_4[6] => Mux25.IN8
+input_4[7] => Mux24.IN8
+input_4[8] => Mux23.IN8
+input_4[9] => Mux22.IN8
+input_4[10] => Mux21.IN8
+input_4[11] => Mux20.IN8
+input_4[12] => Mux19.IN8
+input_4[13] => Mux18.IN8
+input_4[14] => Mux17.IN8
+input_4[15] => Mux16.IN8
+input_4[16] => Mux15.IN8
+input_4[17] => Mux14.IN8
+input_4[18] => Mux13.IN8
+input_4[19] => Mux12.IN8
+input_4[20] => Mux11.IN8
+input_4[21] => Mux10.IN8
+input_4[22] => Mux9.IN8
+input_4[23] => Mux8.IN8
+input_4[24] => Mux7.IN8
+input_4[25] => Mux6.IN8
+input_4[26] => Mux5.IN8
+input_4[27] => Mux4.IN8
+input_4[28] => Mux3.IN8
+input_4[29] => Mux2.IN8
+input_4[30] => Mux1.IN8
+input_4[31] => Mux0.IN8
+input_5[0] => Mux31.IN9
+input_5[1] => Mux30.IN9
+input_5[2] => Mux29.IN9
+input_5[3] => Mux28.IN9
+input_5[4] => Mux27.IN9
+input_5[5] => Mux26.IN9
+input_5[6] => Mux25.IN9
+input_5[7] => Mux24.IN9
+input_5[8] => Mux23.IN9
+input_5[9] => Mux22.IN9
+input_5[10] => Mux21.IN9
+input_5[11] => Mux20.IN9
+input_5[12] => Mux19.IN9
+input_5[13] => Mux18.IN9
+input_5[14] => Mux17.IN9
+input_5[15] => Mux16.IN9
+input_5[16] => Mux15.IN9
+input_5[17] => Mux14.IN9
+input_5[18] => Mux13.IN9
+input_5[19] => Mux12.IN9
+input_5[20] => Mux11.IN9
+input_5[21] => Mux10.IN9
+input_5[22] => Mux9.IN9
+input_5[23] => Mux8.IN9
+input_5[24] => Mux7.IN9
+input_5[25] => Mux6.IN9
+input_5[26] => Mux5.IN9
+input_5[27] => Mux4.IN9
+input_5[28] => Mux3.IN9
+input_5[29] => Mux2.IN9
+input_5[30] => Mux1.IN9
+input_5[31] => Mux0.IN9
+input_6[0] => Mux31.IN10
+input_6[1] => Mux30.IN10
+input_6[2] => Mux29.IN10
+input_6[3] => Mux28.IN10
+input_6[4] => Mux27.IN10
+input_6[5] => Mux26.IN10
+input_6[6] => Mux25.IN10
+input_6[7] => Mux24.IN10
+input_6[8] => Mux23.IN10
+input_6[9] => Mux22.IN10
+input_6[10] => Mux21.IN10
+input_6[11] => Mux20.IN10
+input_6[12] => Mux19.IN10
+input_6[13] => Mux18.IN10
+input_6[14] => Mux17.IN10
+input_6[15] => Mux16.IN10
+input_6[16] => Mux15.IN10
+input_6[17] => Mux14.IN10
+input_6[18] => Mux13.IN10
+input_6[19] => Mux12.IN10
+input_6[20] => Mux11.IN10
+input_6[21] => Mux10.IN10
+input_6[22] => Mux9.IN10
+input_6[23] => Mux8.IN10
+input_6[24] => Mux7.IN10
+input_6[25] => Mux6.IN10
+input_6[26] => Mux5.IN10
+input_6[27] => Mux4.IN10
+input_6[28] => Mux3.IN10
+input_6[29] => Mux2.IN10
+input_6[30] => Mux1.IN10
+input_6[31] => Mux0.IN10
+input_7[0] => Mux31.IN11
+input_7[1] => Mux30.IN11
+input_7[2] => Mux29.IN11
+input_7[3] => Mux28.IN11
+input_7[4] => Mux27.IN11
+input_7[5] => Mux26.IN11
+input_7[6] => Mux25.IN11
+input_7[7] => Mux24.IN11
+input_7[8] => Mux23.IN11
+input_7[9] => Mux22.IN11
+input_7[10] => Mux21.IN11
+input_7[11] => Mux20.IN11
+input_7[12] => Mux19.IN11
+input_7[13] => Mux18.IN11
+input_7[14] => Mux17.IN11
+input_7[15] => Mux16.IN11
+input_7[16] => Mux15.IN11
+input_7[17] => Mux14.IN11
+input_7[18] => Mux13.IN11
+input_7[19] => Mux12.IN11
+input_7[20] => Mux11.IN11
+input_7[21] => Mux10.IN11
+input_7[22] => Mux9.IN11
+input_7[23] => Mux8.IN11
+input_7[24] => Mux7.IN11
+input_7[25] => Mux6.IN11
+input_7[26] => Mux5.IN11
+input_7[27] => Mux4.IN11
+input_7[28] => Mux3.IN11
+input_7[29] => Mux2.IN11
+input_7[30] => Mux1.IN11
+input_7[31] => Mux0.IN11
+input_8[0] => Mux31.IN12
+input_8[1] => Mux30.IN12
+input_8[2] => Mux29.IN12
+input_8[3] => Mux28.IN12
+input_8[4] => Mux27.IN12
+input_8[5] => Mux26.IN12
+input_8[6] => Mux25.IN12
+input_8[7] => Mux24.IN12
+input_8[8] => Mux23.IN12
+input_8[9] => Mux22.IN12
+input_8[10] => Mux21.IN12
+input_8[11] => Mux20.IN12
+input_8[12] => Mux19.IN12
+input_8[13] => Mux18.IN12
+input_8[14] => Mux17.IN12
+input_8[15] => Mux16.IN12
+input_8[16] => Mux15.IN12
+input_8[17] => Mux14.IN12
+input_8[18] => Mux13.IN12
+input_8[19] => Mux12.IN12
+input_8[20] => Mux11.IN12
+input_8[21] => Mux10.IN12
+input_8[22] => Mux9.IN12
+input_8[23] => Mux8.IN12
+input_8[24] => Mux7.IN12
+input_8[25] => Mux6.IN12
+input_8[26] => Mux5.IN12
+input_8[27] => Mux4.IN12
+input_8[28] => Mux3.IN12
+input_8[29] => Mux2.IN12
+input_8[30] => Mux1.IN12
+input_8[31] => Mux0.IN12
+input_9[0] => Mux31.IN13
+input_9[1] => Mux30.IN13
+input_9[2] => Mux29.IN13
+input_9[3] => Mux28.IN13
+input_9[4] => Mux27.IN13
+input_9[5] => Mux26.IN13
+input_9[6] => Mux25.IN13
+input_9[7] => Mux24.IN13
+input_9[8] => Mux23.IN13
+input_9[9] => Mux22.IN13
+input_9[10] => Mux21.IN13
+input_9[11] => Mux20.IN13
+input_9[12] => Mux19.IN13
+input_9[13] => Mux18.IN13
+input_9[14] => Mux17.IN13
+input_9[15] => Mux16.IN13
+input_9[16] => Mux15.IN13
+input_9[17] => Mux14.IN13
+input_9[18] => Mux13.IN13
+input_9[19] => Mux12.IN13
+input_9[20] => Mux11.IN13
+input_9[21] => Mux10.IN13
+input_9[22] => Mux9.IN13
+input_9[23] => Mux8.IN13
+input_9[24] => Mux7.IN13
+input_9[25] => Mux6.IN13
+input_9[26] => Mux5.IN13
+input_9[27] => Mux4.IN13
+input_9[28] => Mux3.IN13
+input_9[29] => Mux2.IN13
+input_9[30] => Mux1.IN13
+input_9[31] => Mux0.IN13
+input_10[0] => Mux31.IN14
+input_10[1] => Mux30.IN14
+input_10[2] => Mux29.IN14
+input_10[3] => Mux28.IN14
+input_10[4] => Mux27.IN14
+input_10[5] => Mux26.IN14
+input_10[6] => Mux25.IN14
+input_10[7] => Mux24.IN14
+input_10[8] => Mux23.IN14
+input_10[9] => Mux22.IN14
+input_10[10] => Mux21.IN14
+input_10[11] => Mux20.IN14
+input_10[12] => Mux19.IN14
+input_10[13] => Mux18.IN14
+input_10[14] => Mux17.IN14
+input_10[15] => Mux16.IN14
+input_10[16] => Mux15.IN14
+input_10[17] => Mux14.IN14
+input_10[18] => Mux13.IN14
+input_10[19] => Mux12.IN14
+input_10[20] => Mux11.IN14
+input_10[21] => Mux10.IN14
+input_10[22] => Mux9.IN14
+input_10[23] => Mux8.IN14
+input_10[24] => Mux7.IN14
+input_10[25] => Mux6.IN14
+input_10[26] => Mux5.IN14
+input_10[27] => Mux4.IN14
+input_10[28] => Mux3.IN14
+input_10[29] => Mux2.IN14
+input_10[30] => Mux1.IN14
+input_10[31] => Mux0.IN14
+input_11[0] => Mux31.IN15
+input_11[1] => Mux30.IN15
+input_11[2] => Mux29.IN15
+input_11[3] => Mux28.IN15
+input_11[4] => Mux27.IN15
+input_11[5] => Mux26.IN15
+input_11[6] => Mux25.IN15
+input_11[7] => Mux24.IN15
+input_11[8] => Mux23.IN15
+input_11[9] => Mux22.IN15
+input_11[10] => Mux21.IN15
+input_11[11] => Mux20.IN15
+input_11[12] => Mux19.IN15
+input_11[13] => Mux18.IN15
+input_11[14] => Mux17.IN15
+input_11[15] => Mux16.IN15
+input_11[16] => Mux15.IN15
+input_11[17] => Mux14.IN15
+input_11[18] => Mux13.IN15
+input_11[19] => Mux12.IN15
+input_11[20] => Mux11.IN15
+input_11[21] => Mux10.IN15
+input_11[22] => Mux9.IN15
+input_11[23] => Mux8.IN15
+input_11[24] => Mux7.IN15
+input_11[25] => Mux6.IN15
+input_11[26] => Mux5.IN15
+input_11[27] => Mux4.IN15
+input_11[28] => Mux3.IN15
+input_11[29] => Mux2.IN15
+input_11[30] => Mux1.IN15
+input_11[31] => Mux0.IN15
+input_12[0] => Mux31.IN16
+input_12[1] => Mux30.IN16
+input_12[2] => Mux29.IN16
+input_12[3] => Mux28.IN16
+input_12[4] => Mux27.IN16
+input_12[5] => Mux26.IN16
+input_12[6] => Mux25.IN16
+input_12[7] => Mux24.IN16
+input_12[8] => Mux23.IN16
+input_12[9] => Mux22.IN16
+input_12[10] => Mux21.IN16
+input_12[11] => Mux20.IN16
+input_12[12] => Mux19.IN16
+input_12[13] => Mux18.IN16
+input_12[14] => Mux17.IN16
+input_12[15] => Mux16.IN16
+input_12[16] => Mux15.IN16
+input_12[17] => Mux14.IN16
+input_12[18] => Mux13.IN16
+input_12[19] => Mux12.IN16
+input_12[20] => Mux11.IN16
+input_12[21] => Mux10.IN16
+input_12[22] => Mux9.IN16
+input_12[23] => Mux8.IN16
+input_12[24] => Mux7.IN16
+input_12[25] => Mux6.IN16
+input_12[26] => Mux5.IN16
+input_12[27] => Mux4.IN16
+input_12[28] => Mux3.IN16
+input_12[29] => Mux2.IN16
+input_12[30] => Mux1.IN16
+input_12[31] => Mux0.IN16
+input_13[0] => Mux31.IN17
+input_13[1] => Mux30.IN17
+input_13[2] => Mux29.IN17
+input_13[3] => Mux28.IN17
+input_13[4] => Mux27.IN17
+input_13[5] => Mux26.IN17
+input_13[6] => Mux25.IN17
+input_13[7] => Mux24.IN17
+input_13[8] => Mux23.IN17
+input_13[9] => Mux22.IN17
+input_13[10] => Mux21.IN17
+input_13[11] => Mux20.IN17
+input_13[12] => Mux19.IN17
+input_13[13] => Mux18.IN17
+input_13[14] => Mux17.IN17
+input_13[15] => Mux16.IN17
+input_13[16] => Mux15.IN17
+input_13[17] => Mux14.IN17
+input_13[18] => Mux13.IN17
+input_13[19] => Mux12.IN17
+input_13[20] => Mux11.IN17
+input_13[21] => Mux10.IN17
+input_13[22] => Mux9.IN17
+input_13[23] => Mux8.IN17
+input_13[24] => Mux7.IN17
+input_13[25] => Mux6.IN17
+input_13[26] => Mux5.IN17
+input_13[27] => Mux4.IN17
+input_13[28] => Mux3.IN17
+input_13[29] => Mux2.IN17
+input_13[30] => Mux1.IN17
+input_13[31] => Mux0.IN17
+input_14[0] => Mux31.IN18
+input_14[1] => Mux30.IN18
+input_14[2] => Mux29.IN18
+input_14[3] => Mux28.IN18
+input_14[4] => Mux27.IN18
+input_14[5] => Mux26.IN18
+input_14[6] => Mux25.IN18
+input_14[7] => Mux24.IN18
+input_14[8] => Mux23.IN18
+input_14[9] => Mux22.IN18
+input_14[10] => Mux21.IN18
+input_14[11] => Mux20.IN18
+input_14[12] => Mux19.IN18
+input_14[13] => Mux18.IN18
+input_14[14] => Mux17.IN18
+input_14[15] => Mux16.IN18
+input_14[16] => Mux15.IN18
+input_14[17] => Mux14.IN18
+input_14[18] => Mux13.IN18
+input_14[19] => Mux12.IN18
+input_14[20] => Mux11.IN18
+input_14[21] => Mux10.IN18
+input_14[22] => Mux9.IN18
+input_14[23] => Mux8.IN18
+input_14[24] => Mux7.IN18
+input_14[25] => Mux6.IN18
+input_14[26] => Mux5.IN18
+input_14[27] => Mux4.IN18
+input_14[28] => Mux3.IN18
+input_14[29] => Mux2.IN18
+input_14[30] => Mux1.IN18
+input_14[31] => Mux0.IN18
+input_15[0] => Mux31.IN19
+input_15[1] => Mux30.IN19
+input_15[2] => Mux29.IN19
+input_15[3] => Mux28.IN19
+input_15[4] => Mux27.IN19
+input_15[5] => Mux26.IN19
+input_15[6] => Mux25.IN19
+input_15[7] => Mux24.IN19
+input_15[8] => Mux23.IN19
+input_15[9] => Mux22.IN19
+input_15[10] => Mux21.IN19
+input_15[11] => Mux20.IN19
+input_15[12] => Mux19.IN19
+input_15[13] => Mux18.IN19
+input_15[14] => Mux17.IN19
+input_15[15] => Mux16.IN19
+input_15[16] => Mux15.IN19
+input_15[17] => Mux14.IN19
+input_15[18] => Mux13.IN19
+input_15[19] => Mux12.IN19
+input_15[20] => Mux11.IN19
+input_15[21] => Mux10.IN19
+input_15[22] => Mux9.IN19
+input_15[23] => Mux8.IN19
+input_15[24] => Mux7.IN19
+input_15[25] => Mux6.IN19
+input_15[26] => Mux5.IN19
+input_15[27] => Mux4.IN19
+input_15[28] => Mux3.IN19
+input_15[29] => Mux2.IN19
+input_15[30] => Mux1.IN19
+input_15[31] => Mux0.IN19
+output_value[0] <= Mux31.DB_MAX_OUTPUT_PORT_TYPE
+output_value[1] <= Mux30.DB_MAX_OUTPUT_PORT_TYPE
+output_value[2] <= Mux29.DB_MAX_OUTPUT_PORT_TYPE
+output_value[3] <= Mux28.DB_MAX_OUTPUT_PORT_TYPE
+output_value[4] <= Mux27.DB_MAX_OUTPUT_PORT_TYPE
+output_value[5] <= Mux26.DB_MAX_OUTPUT_PORT_TYPE
+output_value[6] <= Mux25.DB_MAX_OUTPUT_PORT_TYPE
+output_value[7] <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
+output_value[8] <= Mux23.DB_MAX_OUTPUT_PORT_TYPE
+output_value[9] <= Mux22.DB_MAX_OUTPUT_PORT_TYPE
+output_value[10] <= Mux21.DB_MAX_OUTPUT_PORT_TYPE
+output_value[11] <= Mux20.DB_MAX_OUTPUT_PORT_TYPE
+output_value[12] <= Mux19.DB_MAX_OUTPUT_PORT_TYPE
+output_value[13] <= Mux18.DB_MAX_OUTPUT_PORT_TYPE
+output_value[14] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
+output_value[15] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
+output_value[16] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+output_value[17] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+output_value[18] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+output_value[19] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+output_value[20] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+output_value[21] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+output_value[22] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+output_value[23] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+output_value[24] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+output_value[25] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output_value[26] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output_value[27] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output_value[28] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output_value[29] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output_value[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output_value[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SOC|hazard:my_computer|dpath:dp|better_extender:EXTENDER
 inp[0] => inp[0].IN1
 inp[1] => inp[1].IN1
 inp[2] => inp[2].IN1
@@ -6345,7 +7419,7 @@ ExtImm[30] <= ExtImm.DB_MAX_OUTPUT_PORT_TYPE
 ExtImm[31] <= ExtImm.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|better_extender:EXTENDER|Extender:worse_extender
+|DE1_SOC|hazard:my_computer|dpath:dp|better_extender:EXTENDER|Extender:worse_extender
 A[0] => Q[0].DATAIN
 A[1] => Q[1].DATAIN
 A[2] => Q[2].DATAIN
@@ -6396,7 +7470,7 @@ Q[30] <= <GND>
 Q[31] <= <GND>
 
 
-|hazard|dpath:dp|Register_simple:DECODE_REG0
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG0
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -6527,7 +7601,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_simple:DECODE_REG1
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG1
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -6658,7 +7732,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_simple:DECODE_REG2
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG2
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -6677,7 +7751,7 @@ OUT[2] <= OUT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[3] <= OUT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_simple:DECODE_REG3
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG3
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -6808,7 +7882,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Mux_4to1:FORWARD_MUX_A
+|DE1_SOC|hazard:my_computer|dpath:dp|Mux_4to1:FORWARD_MUX_A
 select[0] => Mux0.IN1
 select[0] => Mux1.IN1
 select[0] => Mux2.IN1
@@ -7035,7 +8109,7 @@ output_value[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 output_value[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Mux_4to1:FORWARD_MUX_B
+|DE1_SOC|hazard:my_computer|dpath:dp|Mux_4to1:FORWARD_MUX_B
 select[0] => Mux0.IN1
 select[0] => Mux1.IN1
 select[0] => Mux2.IN1
@@ -7262,7 +8336,7 @@ output_value[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 output_value[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|ALU:ALU_MODULE
+|DE1_SOC|hazard:my_computer|dpath:dp|ALU:ALU_MODULE
 control[0] => Mux0.IN18
 control[0] => Mux1.IN18
 control[0] => Mux2.IN18
@@ -7958,7 +9032,7 @@ N <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 Z <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Mux_2to1:ALU_SRCB_MUX
+|DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:ALU_SRCB_MUX
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
@@ -8089,7 +9163,7 @@ output_value[30] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 output_value[31] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_simple:EXECUTE_REG0
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:EXECUTE_REG0
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -8220,7 +9294,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_simple:EXECUTE_REG1
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:EXECUTE_REG1
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -8351,7 +9425,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_simple:EXECUTE_REG2
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:EXECUTE_REG2
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -8370,7 +9444,7 @@ OUT[2] <= OUT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[3] <= OUT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Memory:MEMORY_MODULE
+|DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE
 clk => mem[0][0].CLK
 clk => mem[0][1].CLK
 clk => mem[0][2].CLK
@@ -9339,9 +10413,41 @@ RD[28] <= Mux27.DB_MAX_OUTPUT_PORT_TYPE
 RD[29] <= Mux26.DB_MAX_OUTPUT_PORT_TYPE
 RD[30] <= Mux25.DB_MAX_OUTPUT_PORT_TYPE
 RD[31] <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
+mem0[0] <= mem[0][0].DB_MAX_OUTPUT_PORT_TYPE
+mem0[1] <= mem[0][1].DB_MAX_OUTPUT_PORT_TYPE
+mem0[2] <= mem[0][2].DB_MAX_OUTPUT_PORT_TYPE
+mem0[3] <= mem[0][3].DB_MAX_OUTPUT_PORT_TYPE
+mem0[4] <= mem[0][4].DB_MAX_OUTPUT_PORT_TYPE
+mem0[5] <= mem[0][5].DB_MAX_OUTPUT_PORT_TYPE
+mem0[6] <= mem[0][6].DB_MAX_OUTPUT_PORT_TYPE
+mem0[7] <= mem[0][7].DB_MAX_OUTPUT_PORT_TYPE
+mem1[0] <= mem[1][0].DB_MAX_OUTPUT_PORT_TYPE
+mem1[1] <= mem[1][1].DB_MAX_OUTPUT_PORT_TYPE
+mem1[2] <= mem[1][2].DB_MAX_OUTPUT_PORT_TYPE
+mem1[3] <= mem[1][3].DB_MAX_OUTPUT_PORT_TYPE
+mem1[4] <= mem[1][4].DB_MAX_OUTPUT_PORT_TYPE
+mem1[5] <= mem[1][5].DB_MAX_OUTPUT_PORT_TYPE
+mem1[6] <= mem[1][6].DB_MAX_OUTPUT_PORT_TYPE
+mem1[7] <= mem[1][7].DB_MAX_OUTPUT_PORT_TYPE
+mem2[0] <= mem[2][0].DB_MAX_OUTPUT_PORT_TYPE
+mem2[1] <= mem[2][1].DB_MAX_OUTPUT_PORT_TYPE
+mem2[2] <= mem[2][2].DB_MAX_OUTPUT_PORT_TYPE
+mem2[3] <= mem[2][3].DB_MAX_OUTPUT_PORT_TYPE
+mem2[4] <= mem[2][4].DB_MAX_OUTPUT_PORT_TYPE
+mem2[5] <= mem[2][5].DB_MAX_OUTPUT_PORT_TYPE
+mem2[6] <= mem[2][6].DB_MAX_OUTPUT_PORT_TYPE
+mem2[7] <= mem[2][7].DB_MAX_OUTPUT_PORT_TYPE
+mem3[0] <= mem[3][0].DB_MAX_OUTPUT_PORT_TYPE
+mem3[1] <= mem[3][1].DB_MAX_OUTPUT_PORT_TYPE
+mem3[2] <= mem[3][2].DB_MAX_OUTPUT_PORT_TYPE
+mem3[3] <= mem[3][3].DB_MAX_OUTPUT_PORT_TYPE
+mem3[4] <= mem[3][4].DB_MAX_OUTPUT_PORT_TYPE
+mem3[5] <= mem[3][5].DB_MAX_OUTPUT_PORT_TYPE
+mem3[6] <= mem[3][6].DB_MAX_OUTPUT_PORT_TYPE
+mem3[7] <= mem[3][7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_simple:MEMORY_REG0
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG0
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -9472,7 +10578,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_simple:MEMORY_REG1
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG1
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -9603,7 +10709,7 @@ OUT[30] <= OUT[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[31] <= OUT[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Register_simple:MEMORY_REG2
+|DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG2
 clk => OUT[0]~reg0.CLK
 clk => OUT[1]~reg0.CLK
 clk => OUT[2]~reg0.CLK
@@ -9622,7 +10728,7 @@ OUT[2] <= OUT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[3] <= OUT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|dpath:dp|Mux_2to1:RESULT_MUX
+|DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:RESULT_MUX
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
 select => output_value.OUTPUTSELECT
@@ -9753,7 +10859,15 @@ output_value[30] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 output_value[31] <= output_value.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hazard|controller:cont
+|DE1_SOC|hazard:my_computer|controller:cont
+clk => ra2e[0]~reg0.CLK
+clk => ra2e[1]~reg0.CLK
+clk => ra2e[2]~reg0.CLK
+clk => ra2e[3]~reg0.CLK
+clk => ra1e[0]~reg0.CLK
+clk => ra1e[1]~reg0.CLK
+clk => ra1e[2]~reg0.CLK
+clk => ra1e[3]~reg0.CLK
 clk => MemtoRegW~reg0.CLK
 clk => RegWriteW~reg0.CLK
 clk => PCSrcW~reg0.CLK
@@ -9779,52 +10893,58 @@ clk => MemWriteE~reg0.CLK
 clk => RegWriteE~reg0.CLK
 clk => BranchE~reg0.CLK
 clk => PCSrcE~reg0.CLK
+clk => FlagWriteE.CLK
+clk => prevFlushD.CLK
 reset => ~NO_FANOUT~
-ALUFlags[0] => WideOr0.IN0
-ALUFlags[1] => WideOr0.IN1
-ALUFlags[2] => WideOr0.IN2
-ALUFlags[3] => WideOr0.IN3
+ALUFlags[0] => FlagsE[0].DATAIN
+ALUFlags[1] => FlagsE[1].DATAIN
+ALUFlags[2] => FlagsE[2].DATAIN
+ALUFlags[3] => FlagsE[3].DATAIN
 Cond[0] => CondE[0].DATAIN
 Cond[1] => CondE[1].DATAIN
 Cond[2] => CondE[2].DATAIN
 Cond[3] => CondE[3].DATAIN
-Funct[0] => Mux9.IN3
-Funct[0] => Mux8.IN3
-Funct[0] => Mux7.IN3
-Funct[1] => Mux3.IN2
-Funct[1] => Mux3.IN3
-Funct[2] => Mux4.IN2
-Funct[2] => Mux4.IN3
-Funct[3] => Mux5.IN2
-Funct[3] => Mux5.IN3
-Funct[4] => Mux6.IN2
+Funct[0] => Mux3.IN3
+Funct[0] => Mux5.IN3
+Funct[0] => Mux4.IN2
+Funct[1] => Mux9.IN3
+Funct[2] => Mux8.IN3
+Funct[3] => Mux7.IN3
 Funct[4] => Mux6.IN3
 Funct[5] => ~NO_FANOUT~
 Op[0] => Mux2.IN5
-Op[0] => Mux1.IN5
-Op[0] => Mux3.IN5
-Op[0] => Mux4.IN5
-Op[0] => Mux5.IN5
-Op[0] => Mux6.IN5
-Op[0] => Mux7.IN5
-Op[0] => Mux8.IN5
-Op[0] => Mux9.IN5
-Op[0] => Mux10.IN5
-Op[0] => Mux11.IN5
+Op[0] => Mux0.IN5
+Op[0] => Mux14.IN5
+Op[0] => Mux13.IN5
+Op[0] => Mux15.IN5
 Op[0] => Mux12.IN5
+Op[0] => Mux11.IN5
+Op[0] => Mux16.IN5
+Op[0] => Mux10.IN5
+Op[0] => Mux9.IN5
+Op[0] => Mux8.IN5
+Op[0] => Mux7.IN5
+Op[0] => Mux6.IN5
+Op[0] => Mux5.IN5
+Op[0] => Mux4.IN5
+Op[0] => Mux3.IN5
 Op[0] => Equal0.IN1
 Op[1] => Mux2.IN4
-Op[1] => Mux1.IN4
-Op[1] => Mux3.IN4
-Op[1] => Mux4.IN4
-Op[1] => Mux5.IN4
-Op[1] => Mux6.IN4
-Op[1] => Mux7.IN4
-Op[1] => Mux8.IN4
-Op[1] => Mux9.IN4
-Op[1] => Mux10.IN4
-Op[1] => Mux11.IN4
+Op[1] => Mux0.IN4
+Op[1] => Mux14.IN4
+Op[1] => Mux13.IN4
+Op[1] => Mux15.IN4
 Op[1] => Mux12.IN4
+Op[1] => Mux11.IN4
+Op[1] => Mux16.IN4
+Op[1] => Mux10.IN4
+Op[1] => Mux9.IN4
+Op[1] => Mux8.IN4
+Op[1] => Mux7.IN4
+Op[1] => Mux6.IN4
+Op[1] => Mux5.IN4
+Op[1] => Mux4.IN4
+Op[1] => Mux3.IN4
 Op[1] => Equal0.IN0
 Rd[0] => Equal1.IN3
 Rd[1] => Equal1.IN2
@@ -9850,12 +10970,12 @@ inst_bus[16] => ~NO_FANOUT~
 inst_bus[17] => ~NO_FANOUT~
 inst_bus[18] => ~NO_FANOUT~
 inst_bus[19] => ~NO_FANOUT~
-inst_bus[20] => ~NO_FANOUT~
+inst_bus[20] => FlagWriteD.IN1
 inst_bus[21] => Equal2.IN2
 inst_bus[22] => Equal2.IN3
 inst_bus[23] => Equal2.IN1
 inst_bus[24] => Equal2.IN0
-inst_bus[25] => always2.IN1
+inst_bus[25] => always1.IN1
 inst_bus[26] => ~NO_FANOUT~
 inst_bus[27] => ~NO_FANOUT~
 inst_bus[28] => ~NO_FANOUT~
@@ -9867,8 +10987,8 @@ BranchTakenE <= BranchTakenE.DB_MAX_OUTPUT_PORT_TYPE
 RegWriteW <= RegWriteW~reg0.DB_MAX_OUTPUT_PORT_TYPE
 RegSrcD[0] <= RegSrcD[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 RegSrcD[1] <= RegSrcD[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-ImmSrcD[0] <= <VCC>
-ImmSrcD[1] <= <GND>
+ImmSrcD[0] <= ImmSrcD[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ImmSrcD[1] <= ImmSrcD[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 ALUControlE[0] <= ALUControlE[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ALUControlE[1] <= ALUControlE[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ALUControlE[2] <= ALUControlE[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -9878,7 +10998,7 @@ MemWriteM <= MemWriteM~reg0.DB_MAX_OUTPUT_PORT_TYPE
 MemtoRegW <= MemtoRegW~reg0.DB_MAX_OUTPUT_PORT_TYPE
 shift_enable <= shift_enable$latch.DB_MAX_OUTPUT_PORT_TYPE
 rotate_immediate_enable <= rotate_immediate_enable$latch.DB_MAX_OUTPUT_PORT_TYPE
-BranchD <= <VCC>
+BranchD <= BranchD$latch.DB_MAX_OUTPUT_PORT_TYPE
 RegWriteD <= RegWriteD$latch.DB_MAX_OUTPUT_PORT_TYPE
 MemWriteD <= MemWriteD$latch.DB_MAX_OUTPUT_PORT_TYPE
 MemtoRegD <= MemtoRegD$latch.DB_MAX_OUTPUT_PORT_TYPE
@@ -9896,158 +11016,90 @@ PCSrcM <= PCSrcM~reg0.DB_MAX_OUTPUT_PORT_TYPE
 RegWriteM <= RegWriteM~reg0.DB_MAX_OUTPUT_PORT_TYPE
 MemtoRegM <= MemtoRegM~reg0.DB_MAX_OUTPUT_PORT_TYPE
 PCSrcD <= PCSrcD.DB_MAX_OUTPUT_PORT_TYPE
-CondEx <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+CondEx <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ra1d[0] => ra1e[0]~reg0.DATAIN
+ra1d[1] => ra1e[1]~reg0.DATAIN
+ra1d[2] => ra1e[2]~reg0.DATAIN
+ra1d[3] => ra1e[3]~reg0.DATAIN
+ra2d[0] => ra2e[0]~reg0.DATAIN
+ra2d[1] => ra2e[1]~reg0.DATAIN
+ra2d[2] => ra2e[2]~reg0.DATAIN
+ra2d[3] => ra2e[3]~reg0.DATAIN
+ra1e[0] <= ra1e[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ra1e[1] <= ra1e[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ra1e[2] <= ra1e[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ra1e[3] <= ra1e[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ra2e[0] <= ra2e[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ra2e[1] <= ra2e[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ra2e[2] <= ra2e[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ra2e[3] <= ra2e[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FlushE => ALUControlE.IN1
+FlushE => ALUSrcE.IN1
+FlushE => PCSrcE.IN1
+FlushE => BranchE.IN1
+FlushE => RegWriteE.IN1
+FlushE => MemWriteE.IN1
+FlushE => MemtoRegE.IN1
+FlushE => ra2e[0]~reg0.ENA
+FlushE => ra2e[1]~reg0.ENA
+FlushE => ra2e[2]~reg0.ENA
+FlushE => ra2e[3]~reg0.ENA
+FlushE => ra1e[0]~reg0.ENA
+FlushE => ra1e[1]~reg0.ENA
+FlushE => ra1e[2]~reg0.ENA
+FlushE => ra1e[3]~reg0.ENA
+FlushD => prevFlushD.DATAIN
 
 
-|hazard|HazardUnit:hu
-rd1_execute[0] => Equal0.IN59
-rd1_execute[1] => Equal0.IN58
-rd1_execute[2] => Equal0.IN57
-rd1_execute[3] => Equal0.IN56
-rd1_execute[4] => Equal0.IN27
-rd1_execute[5] => Equal0.IN26
-rd1_execute[6] => Equal0.IN25
-rd1_execute[7] => Equal0.IN24
-rd1_execute[8] => Equal0.IN23
-rd1_execute[9] => Equal0.IN22
-rd1_execute[10] => Equal0.IN21
-rd1_execute[11] => Equal0.IN20
-rd1_execute[12] => Equal0.IN19
-rd1_execute[13] => Equal0.IN18
-rd1_execute[14] => Equal0.IN17
-rd1_execute[15] => Equal0.IN16
-rd1_execute[16] => Equal0.IN15
-rd1_execute[17] => Equal0.IN14
-rd1_execute[18] => Equal0.IN13
-rd1_execute[19] => Equal0.IN12
-rd1_execute[20] => Equal0.IN11
-rd1_execute[21] => Equal0.IN10
-rd1_execute[22] => Equal0.IN9
-rd1_execute[23] => Equal0.IN8
-rd1_execute[24] => Equal0.IN7
-rd1_execute[25] => Equal0.IN6
-rd1_execute[26] => Equal0.IN5
-rd1_execute[27] => Equal0.IN4
-rd1_execute[28] => Equal0.IN3
-rd1_execute[29] => Equal0.IN2
-rd1_execute[30] => Equal0.IN1
-rd1_execute[31] => Equal0.IN0
-rd2_execute[0] => Equal1.IN59
-rd2_execute[1] => Equal1.IN58
-rd2_execute[2] => Equal1.IN57
-rd2_execute[3] => Equal1.IN56
-rd2_execute[4] => Equal1.IN27
-rd2_execute[5] => Equal1.IN26
-rd2_execute[6] => Equal1.IN25
-rd2_execute[7] => Equal1.IN24
-rd2_execute[8] => Equal1.IN23
-rd2_execute[9] => Equal1.IN22
-rd2_execute[10] => Equal1.IN21
-rd2_execute[11] => Equal1.IN20
-rd2_execute[12] => Equal1.IN19
-rd2_execute[13] => Equal1.IN18
-rd2_execute[14] => Equal1.IN17
-rd2_execute[15] => Equal1.IN16
-rd2_execute[16] => Equal1.IN15
-rd2_execute[17] => Equal1.IN14
-rd2_execute[18] => Equal1.IN13
-rd2_execute[19] => Equal1.IN12
-rd2_execute[20] => Equal1.IN11
-rd2_execute[21] => Equal1.IN10
-rd2_execute[22] => Equal1.IN9
-rd2_execute[23] => Equal1.IN8
-rd2_execute[24] => Equal1.IN7
-rd2_execute[25] => Equal1.IN6
-rd2_execute[26] => Equal1.IN5
-rd2_execute[27] => Equal1.IN4
-rd2_execute[28] => Equal1.IN3
-rd2_execute[29] => Equal1.IN2
-rd2_execute[30] => Equal1.IN1
-rd2_execute[31] => Equal1.IN0
-rd1[0] => Equal2.IN59
-rd1[1] => Equal2.IN58
-rd1[2] => Equal2.IN57
-rd1[3] => Equal2.IN56
-rd1[4] => Equal2.IN27
-rd1[5] => Equal2.IN26
-rd1[6] => Equal2.IN25
-rd1[7] => Equal2.IN24
-rd1[8] => Equal2.IN23
-rd1[9] => Equal2.IN22
-rd1[10] => Equal2.IN21
-rd1[11] => Equal2.IN20
-rd1[12] => Equal2.IN19
-rd1[13] => Equal2.IN18
-rd1[14] => Equal2.IN17
-rd1[15] => Equal2.IN16
-rd1[16] => Equal2.IN15
-rd1[17] => Equal2.IN14
-rd1[18] => Equal2.IN13
-rd1[19] => Equal2.IN12
-rd1[20] => Equal2.IN11
-rd1[21] => Equal2.IN10
-rd1[22] => Equal2.IN9
-rd1[23] => Equal2.IN8
-rd1[24] => Equal2.IN7
-rd1[25] => Equal2.IN6
-rd1[26] => Equal2.IN5
-rd1[27] => Equal2.IN4
-rd1[28] => Equal2.IN3
-rd1[29] => Equal2.IN2
-rd1[30] => Equal2.IN1
-rd1[31] => Equal2.IN0
-rd2[0] => Equal3.IN59
-rd2[1] => Equal3.IN58
-rd2[2] => Equal3.IN57
-rd2[3] => Equal3.IN56
-rd2[4] => Equal3.IN27
-rd2[5] => Equal3.IN26
-rd2[6] => Equal3.IN25
-rd2[7] => Equal3.IN24
-rd2[8] => Equal3.IN23
-rd2[9] => Equal3.IN22
-rd2[10] => Equal3.IN21
-rd2[11] => Equal3.IN20
-rd2[12] => Equal3.IN19
-rd2[13] => Equal3.IN18
-rd2[14] => Equal3.IN17
-rd2[15] => Equal3.IN16
-rd2[16] => Equal3.IN15
-rd2[17] => Equal3.IN14
-rd2[18] => Equal3.IN13
-rd2[19] => Equal3.IN12
-rd2[20] => Equal3.IN11
-rd2[21] => Equal3.IN10
-rd2[22] => Equal3.IN9
-rd2[23] => Equal3.IN8
-rd2[24] => Equal3.IN7
-rd2[25] => Equal3.IN6
-rd2[26] => Equal3.IN5
-rd2[27] => Equal3.IN4
-rd2[28] => Equal3.IN3
-rd2[29] => Equal3.IN2
-rd2[30] => Equal3.IN1
-rd2[31] => Equal3.IN0
-wa3e[0] => Equal2.IN63
-wa3e[0] => Equal3.IN63
-wa3e[1] => Equal2.IN62
-wa3e[1] => Equal3.IN62
-wa3e[2] => Equal2.IN61
-wa3e[2] => Equal3.IN61
-wa3e[3] => Equal2.IN60
-wa3e[3] => Equal3.IN60
-wa3m[0] => Equal0.IN63
-wa3m[0] => Equal1.IN63
-wa3m[1] => Equal0.IN62
-wa3m[1] => Equal1.IN62
-wa3m[2] => Equal0.IN61
-wa3m[2] => Equal1.IN61
-wa3m[3] => Equal0.IN60
-wa3m[3] => Equal1.IN60
-wa3w[0] => ~NO_FANOUT~
-wa3w[1] => ~NO_FANOUT~
-wa3w[2] => ~NO_FANOUT~
-wa3w[3] => ~NO_FANOUT~
+|DE1_SOC|hazard:my_computer|HazardUnit:hu
+ra1e[0] => Equal0.IN3
+ra1e[0] => Equal1.IN3
+ra1e[1] => Equal0.IN2
+ra1e[1] => Equal1.IN2
+ra1e[2] => Equal0.IN1
+ra1e[2] => Equal1.IN1
+ra1e[3] => Equal0.IN0
+ra1e[3] => Equal1.IN0
+ra2e[0] => Equal2.IN3
+ra2e[0] => Equal3.IN3
+ra2e[1] => Equal2.IN2
+ra2e[1] => Equal3.IN2
+ra2e[2] => Equal2.IN1
+ra2e[2] => Equal3.IN1
+ra2e[3] => Equal2.IN0
+ra2e[3] => Equal3.IN0
+ra1d[0] => Equal4.IN3
+ra1d[1] => Equal4.IN2
+ra1d[2] => Equal4.IN1
+ra1d[3] => Equal4.IN0
+ra2d[0] => Equal5.IN3
+ra2d[1] => Equal5.IN2
+ra2d[2] => Equal5.IN1
+ra2d[3] => Equal5.IN0
+wa3e[0] => Equal4.IN7
+wa3e[0] => Equal5.IN7
+wa3e[1] => Equal4.IN6
+wa3e[1] => Equal5.IN6
+wa3e[2] => Equal4.IN5
+wa3e[2] => Equal5.IN5
+wa3e[3] => Equal4.IN4
+wa3e[3] => Equal5.IN4
+wa3m[0] => Equal0.IN7
+wa3m[0] => Equal2.IN7
+wa3m[1] => Equal0.IN6
+wa3m[1] => Equal2.IN6
+wa3m[2] => Equal0.IN5
+wa3m[2] => Equal2.IN5
+wa3m[3] => Equal0.IN4
+wa3m[3] => Equal2.IN4
+wa3w[0] => Equal1.IN7
+wa3w[0] => Equal3.IN7
+wa3w[1] => Equal1.IN6
+wa3w[1] => Equal3.IN6
+wa3w[2] => Equal1.IN5
+wa3w[2] => Equal3.IN5
+wa3w[3] => Equal1.IN4
+wa3w[3] => Equal3.IN4
 RegWriteM => always0.IN1
 RegWriteM => always0.IN1
 RegWriteW => always0.IN1

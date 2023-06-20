@@ -1,0 +1,133 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'KEY[0]'
+Slack : -11.785
+TNS   : -4965.461
+
+Type  : Slow 1100mV 85C Model Setup 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : -5.773
+TNS   : -64.417
+
+Type  : Slow 1100mV 85C Model Hold 'KEY[0]'
+Slack : -2.929
+TNS   : -8.343
+
+Type  : Slow 1100mV 85C Model Hold 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 0.762
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : -4.315
+TNS   : -46.210
+
+Type  : Slow 1100mV 85C Model Removal 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 2.386
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.394
+TNS   : -532.933
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 0.212
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'KEY[0]'
+Slack : -11.603
+TNS   : -4845.515
+
+Type  : Slow 1100mV 0C Model Setup 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : -5.758
+TNS   : -64.234
+
+Type  : Slow 1100mV 0C Model Hold 'KEY[0]'
+Slack : -2.945
+TNS   : -8.403
+
+Type  : Slow 1100mV 0C Model Hold 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 0.630
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : -4.325
+TNS   : -46.795
+
+Type  : Slow 1100mV 0C Model Removal 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 2.407
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.394
+TNS   : -593.960
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 0.222
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'KEY[0]'
+Slack : -7.032
+TNS   : -2773.993
+
+Type  : Fast 1100mV 85C Model Setup 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : -2.928
+TNS   : -30.821
+
+Type  : Fast 1100mV 85C Model Hold 'KEY[0]'
+Slack : -1.650
+TNS   : -4.637
+
+Type  : Fast 1100mV 85C Model Hold 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : -1.946
+TNS   : -20.208
+
+Type  : Fast 1100mV 85C Model Removal 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 1.238
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.082
+TNS   : -56.120
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'KEY[0]'
+Slack : -6.224
+TNS   : -2387.451
+
+Type  : Fast 1100mV 0C Model Setup 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : -2.692
+TNS   : -28.275
+
+Type  : Fast 1100mV 0C Model Hold 'KEY[0]'
+Slack : -1.631
+TNS   : -4.619
+
+Type  : Fast 1100mV 0C Model Hold 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : -1.825
+TNS   : -19.274
+
+Type  : Fast 1100mV 0C Model Removal 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 1.246
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.083
+TNS   : -68.571
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]'
+Slack : 0.332
+TNS   : 0.000
+
+------------------------------------------------------------
