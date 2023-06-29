@@ -43,8 +43,8 @@ wire [1:0] forae;
 wire [1:0] forbe;
 
 hazard my_computer (
-	KEY[0],  // clk
-	KEY[1],  // reset
+	~KEY[0],  // clk
+	~KEY[1],  // reset
 	SW[3:0],  // reg_out_select
 	reg_out,  // reg_out
 	dummy1,

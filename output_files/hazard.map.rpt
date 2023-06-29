@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hazard
-Tue Jun 20 23:15:43 2023
+Wed Jun 21 11:39:37 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -98,7 +98,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jun 20 23:15:43 2023          ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun 21 11:39:37 2023          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; hazard                                         ;
 ; Top-level Entity Name           ; DE1_SOC                                        ;
@@ -218,14 +218,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-14        ;   0.0%      ;
+;     Processors 4-14        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -263,14 +258,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1604         ;
+; Estimate of Logic utilization (ALMs needed) ; 1629         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 2044         ;
+; Combinational ALUT usage for logic          ; 2073         ;
 ;     -- 7 input functions                    ; 36           ;
-;     -- 6 input functions                    ; 1072         ;
+;     -- 6 input functions                    ; 1092         ;
 ;     -- 5 input functions                    ; 301          ;
-;     -- 4 input functions                    ; 193          ;
-;     -- <=3 input functions                  ; 442          ;
+;     -- 4 input functions                    ; 194          ;
+;     -- <=3 input functions                  ; 450          ;
 ;                                             ;              ;
 ; Dedicated logic registers                   ; 943          ;
 ;                                             ;              ;
@@ -280,8 +275,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 943          ;
-; Total fan-out                               ; 13536        ;
-; Average fan-out                             ; 4.34         ;
+; Total fan-out                               ; 13691        ;
+; Average fan-out                             ; 4.35         ;
 +---------------------------------------------+--------------+
 
 
@@ -290,23 +285,23 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                            ; Entity Name      ; Library Name ;
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------+------------------+--------------+
-; |DE1_SOC                                         ; 2044 (0)            ; 943 (0)                   ; 0                 ; 0          ; 66   ; 0            ; |DE1_SOC                                                                                       ; DE1_SOC          ; work         ;
-;    |hazard:my_computer|                          ; 2023 (0)            ; 943 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer                                                                    ; hazard           ; work         ;
+; |DE1_SOC                                         ; 2073 (0)            ; 943 (0)                   ; 0                 ; 0          ; 66   ; 0            ; |DE1_SOC                                                                                       ; DE1_SOC          ; work         ;
+;    |hazard:my_computer|                          ; 2045 (0)            ; 943 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer                                                                    ; hazard           ; work         ;
 ;       |HazardUnit:hu|                            ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|HazardUnit:hu                                                      ; HazardUnit       ; work         ;
 ;       |controller:cont|                          ; 44 (44)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|controller:cont                                                    ; controller       ; work         ;
-;       |dpath:dp|                                 ; 1962 (159)          ; 908 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp                                                           ; dpath            ; work         ;
+;       |dpath:dp|                                 ; 1984 (159)          ; 908 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp                                                           ; dpath            ; work         ;
 ;          |ALU:ALU_MODULE|                        ; 356 (356)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|ALU:ALU_MODULE                                            ; ALU              ; work         ;
 ;          |Adder:PC_ADDER|                        ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Adder:PC_ADDER                                            ; Adder            ; work         ;
-;          |Memory:MEMORY_MODULE|                  ; 422 (422)           ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE                                      ; Memory           ; work         ;
+;          |Memory:MEMORY_MODULE|                  ; 424 (424)           ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE                                      ; Memory           ; work         ;
 ;          |Mux_2to1:A1_MUX|                       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:A1_MUX                                           ; Mux_2to1         ; work         ;
 ;          |Mux_2to1:A2_MUX|                       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:A2_MUX                                           ; Mux_2to1         ; work         ;
 ;          |Mux_2to1:ALU_SRCB_MUX|                 ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:ALU_SRCB_MUX                                     ; Mux_2to1         ; work         ;
 ;          |Mux_2to1:RESULT_MUX|                   ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_2to1:RESULT_MUX                                       ; Mux_2to1         ; work         ;
 ;          |Mux_4to1:FORWARD_MUX_A|                ; 66 (66)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_4to1:FORWARD_MUX_A                                    ; Mux_4to1         ; work         ;
 ;          |Mux_4to1:FORWARD_MUX_B|                ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_4to1:FORWARD_MUX_B                                    ; Mux_4to1         ; work         ;
-;          |Register_file:REG_FILE|                ; 195 (0)             ; 480 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE                                    ; Register_file    ; work         ;
+;          |Register_file:REG_FILE|                ; 215 (0)             ; 480 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE                                    ; Register_file    ; work         ;
 ;             |Mux_16to1:mux_1|                    ; 160 (160)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_1                    ; Mux_16to1        ; work         ;
-;             |Mux_16to1:mux_reg_out|              ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_reg_out              ; Mux_16to1        ; work         ;
+;             |Mux_16to1:mux_reg_out|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_reg_out              ; Mux_16to1        ; work         ;
 ;             |Register_sync_rw:registers[0].Reg|  ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[0].Reg  ; Register_sync_rw ; work         ;
 ;             |Register_sync_rw:registers[10].Reg| ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[10].Reg ; Register_sync_rw ; work         ;
 ;             |Register_sync_rw:registers[11].Reg| ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[11].Reg ; Register_sync_rw ; work         ;
@@ -336,6 +331,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |Register_sync_rw:PC_REG|               ; 35 (35)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:PC_REG                                   ; Register_sync_rw ; work         ;
 ;          |better_extender:EXTENDER|              ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hazard:my_computer|dpath:dp|better_extender:EXTENDER                                  ; better_extender  ; work         ;
 ;    |hexto7seg:hex_0|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hexto7seg:hex_0                                                                       ; hexto7seg        ; work         ;
+;    |hexto7seg:hex_1|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hexto7seg:hex_1                                                                       ; hexto7seg        ; work         ;
 ;    |hexto7seg:hex_4|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hexto7seg:hex_4                                                                       ; hexto7seg        ; work         ;
 ;    |hexto7seg:hex_5|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SOC|hexto7seg:hex_5                                                                       ; hexto7seg        ; work         ;
 +--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------+------------------+--------------+
@@ -401,60 +397,60 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[0].Reg|OUT[16]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[1].Reg|OUT[1]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[2].Reg|OUT[19]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[3].Reg|OUT[1]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[4].Reg|OUT[6]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[5].Reg|OUT[31]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[6].Reg|OUT[5]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[7].Reg|OUT[26]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[8].Reg|OUT[16]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[9].Reg|OUT[25]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[10].Reg|OUT[14] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[11].Reg|OUT[21] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[12].Reg|OUT[3]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[13].Reg|OUT[11] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[14].Reg|OUT[8]  ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG3|OUT[12]                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[0].Reg|OUT[22]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[1].Reg|OUT[18]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[2].Reg|OUT[18]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[3].Reg|OUT[26]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[4].Reg|OUT[5]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[5].Reg|OUT[1]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[6].Reg|OUT[21]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[7].Reg|OUT[2]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[8].Reg|OUT[27]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[9].Reg|OUT[14]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[10].Reg|OUT[4]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[11].Reg|OUT[18] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[12].Reg|OUT[23] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[13].Reg|OUT[5]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Register_sync_rw:registers[14].Reg|OUT[2]  ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG3|OUT[28]                               ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:PC_REG|OUT[0]                                    ;
-; 5:1                ; 30 bits   ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:PC_REG|OUT[14]                                   ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG0|OUT[2]                                ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG0|OUT[23]                               ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[15][2]                                   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[14][3]                                   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[13][0]                                   ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[12][0]                                   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[11][0]                                   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[10][3]                                   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[9][6]                                    ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[8][6]                                    ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[7][2]                                    ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[6][4]                                    ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[5][2]                                    ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[4][2]                                    ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[3][1]                                    ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[2][0]                                    ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[1][3]                                    ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[0][4]                                    ;
-; 17:1               ; 32 bits   ; 352 LEs       ; 320 LEs              ; 32 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG0|OUT[0]                                ;
-; 17:1               ; 8 bits    ; 88 LEs        ; 80 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG0|OUT[26]                               ;
-; 17:1               ; 8 bits    ; 88 LEs        ; 80 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG0|OUT[14]                               ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 30 LEs               ; 45 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG1|OUT[2]                                ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:PC_REG|OUT[5]                                    ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG0|OUT[7]                                ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG0|OUT[20]                               ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[15][6]                                   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[14][2]                                   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[13][2]                                   ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[12][3]                                   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[11][1]                                   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[10][2]                                   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[9][5]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[8][4]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[7][6]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[6][6]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[5][1]                                    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[4][5]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[3][3]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[2][2]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[1][7]                                    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[0][6]                                    ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 320 LEs              ; 32 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG0|OUT[23]                               ;
+; 17:1               ; 8 bits    ; 88 LEs        ; 80 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG0|OUT[29]                               ;
+; 17:1               ; 8 bits    ; 88 LEs        ; 80 LEs               ; 8 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:MEMORY_REG0|OUT[13]                               ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 30 LEs               ; 45 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG1|OUT[13]                               ;
 ; 11:1               ; 11 bits   ; 77 LEs        ; 66 LEs               ; 11 LEs                 ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG1|OUT[24]                               ;
-; 202:1              ; 8 bits    ; 1072 LEs      ; 512 LEs              ; 560 LEs                ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[7]                                ;
-; 202:1              ; 8 bits    ; 1072 LEs      ; 544 LEs              ; 528 LEs                ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[15]                               ;
-; 202:1              ; 8 bits    ; 1072 LEs      ; 592 LEs              ; 480 LEs                ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[20]                               ;
-; 202:1              ; 8 bits    ; 1072 LEs      ; 576 LEs              ; 496 LEs                ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[28]                               ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG1|OUT[28]                               ;
+; 202:1              ; 8 bits    ; 1072 LEs      ; 512 LEs              ; 560 LEs                ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[5]                                ;
+; 202:1              ; 8 bits    ; 1072 LEs      ; 544 LEs              ; 528 LEs                ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[9]                                ;
+; 202:1              ; 8 bits    ; 1072 LEs      ; 592 LEs              ; 480 LEs                ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[16]                               ;
+; 202:1              ; 8 bits    ; 1072 LEs      ; 576 LEs              ; 496 LEs                ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26]                               ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_simple:DECODE_REG1|OUT[30]                               ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |DE1_SOC|hazard:my_computer|dpath:dp|Memory:MEMORY_MODULE|mem[8][0]                                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_4to1:FORWARD_MUX_A|Mux28                                      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_4to1:FORWARD_MUX_B|Mux5                                       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|controller:cont|Mux4                                                       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|controller:cont|Mux2                                                       ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_4to1:FORWARD_MUX_A|Mux30                                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|Mux_4to1:FORWARD_MUX_B|Mux0                                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|controller:cont|Mux5                                                       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|controller:cont|Mux0                                                       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ShiftRight3                                                       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ShiftRight3                                                       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ShiftLeft0                                                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ShiftRight1                                                       ;
 ; 4:1                ; 53 bits   ; 106 LEs       ; 106 LEs              ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ShiftRight3                                                       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ShiftRight0                                                       ;
 ; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ShiftRight0                                                       ;
@@ -466,9 +462,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ShiftLeft0                                                        ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ShiftLeft0                                                        ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|better_extender:EXTENDER|ExtImm[9]                                ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_reg_out|Mux30                ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_1|Mux22                      ;
-; 16:1               ; 31 bits   ; 310 LEs       ; 248 LEs              ; 62 LEs                 ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ALU:ALU_MODULE|Mux9                                               ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_reg_out|Mux24                ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|Register_file:REG_FILE|Mux_16to1:mux_1|Mux28                      ;
+; 16:1               ; 31 bits   ; 310 LEs       ; 248 LEs              ; 62 LEs                 ; No         ; |DE1_SOC|hazard:my_computer|dpath:dp|ALU:ALU_MODULE|Mux0                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
 
 
@@ -977,50 +973,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+-------+----------+-------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hazard:my_computer|dpath:dp"                                                                                                            ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                          ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
-; rd1_execute ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; rd2_execute ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; rd1         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; rd2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; result_wire ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register5   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register6   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register7   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register8   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register9   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register10  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register11  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register12  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register13  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register14  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; register15  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; reg_out_out ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (4 bits) it drives; bit(s) "reg_out_out[31..4]" have no fanouts ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hazard:my_computer|dpath:dp"                                                               ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; rd1_execute ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rd2_execute ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rd1         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rd2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; result_wire ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register5   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register6   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register7   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register8   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register9   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register10  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register11  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register12  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register13  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register14  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register15  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hazard:my_computer"                                                                                                                                                              ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; reg_out_out   ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (32 bits) it drives.  The 28 most-significant bit(s) in the port expression will be connected to GND. ;
-; register0     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; register1     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; mem0          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; mem1          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; mem2          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; mem3          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; pc_out[31..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; ForwardAE     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; ForwardBE     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hazard:my_computer"                                                                               ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; reg_out_out[31..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register0          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; register1          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mem0               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mem1               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mem2               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mem3               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pc_out[31..8]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ForwardAE          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ForwardBE          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1034,25 +1029,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 207                         ;
 ;     SCLR SLD          ; 15                          ;
 ;     plain             ; 37                          ;
-; arriav_lcell_comb     ; 2049                        ;
+; arriav_lcell_comb     ; 2079                        ;
 ;     arith             ; 288                         ;
 ;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 189                         ;
 ;         5 data inputs ; 96                          ;
 ;     extend            ; 36                          ;
 ;         7 data inputs ; 36                          ;
-;     normal            ; 1725                        ;
+;     normal            ; 1755                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
+;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 100                         ;
-;         3 data inputs ; 150                         ;
-;         4 data inputs ; 193                         ;
+;         3 data inputs ; 158                         ;
+;         4 data inputs ; 194                         ;
 ;         5 data inputs ; 205                         ;
-;         6 data inputs ; 1072                        ;
+;         6 data inputs ; 1092                        ;
 ; boundary_port         ; 66                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 6.85                        ;
+; Average LUT depth     ; 6.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1061,7 +1056,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1071,7 +1066,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Jun 20 23:15:32 2023
+    Info: Processing started: Wed Jun 21 11:39:22 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hazard -c hazard
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -1173,17 +1168,7 @@ Info (10041): Inferred latch for "MemWriteD" at controller.v(192) File: C:/Users
 Info (10041): Inferred latch for "RegWriteD" at controller.v(192) File: C:/Users/nekilic/Desktop/46/project/hazard/controller.v Line: 192
 Info (10041): Inferred latch for "BranchD" at controller.v(192) File: C:/Users/nekilic/Desktop/46/project/hazard/controller.v Line: 192
 Info (12128): Elaborating entity "HazardUnit" for hierarchy "hazard:my_computer|HazardUnit:hu" File: C:/Users/nekilic/Desktop/46/project/hazard/hazard.v Line: 237
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "reg_out[7]" is missing source, defaulting to GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 25
-    Warning (12110): Net "reg_out[6]" is missing source, defaulting to GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 25
-    Warning (12110): Net "reg_out[5]" is missing source, defaulting to GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 25
-    Warning (12110): Net "reg_out[4]" is missing source, defaulting to GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 25
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "reg_out[7]" is missing source, defaulting to GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 25
-    Warning (12110): Net "reg_out[6]" is missing source, defaulting to GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 25
-    Warning (12110): Net "reg_out[5]" is missing source, defaulting to GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 25
-    Warning (12110): Net "reg_out[4]" is missing source, defaulting to GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 25
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "hazard:my_computer|controller:cont|BranchD" merged with LATCH primitive "hazard:my_computer|controller:cont|RegSrcD[0]" File: C:/Users/nekilic/Desktop/46/project/hazard/controller.v Line: 25
 Warning (13012): Latch hazard:my_computer|controller:cont|RegSrcD[0] has unsafe behavior File: C:/Users/nekilic/Desktop/46/project/hazard/controller.v Line: 192
@@ -1215,13 +1200,6 @@ Warning (13012): Latch hazard:my_computer|controller:cont|ALUControlD[1] has uns
 Warning (13012): Latch hazard:my_computer|controller:cont|MemWriteD has unsafe behavior File: C:/Users/nekilic/Desktop/46/project/hazard/controller.v Line: 27
     Warning (13013): Ports D and ENA on the latch are fed by the same signal hazard:my_computer|dpath:dp|Register_sync_rw:FETCH_REG0|OUT[26] File: C:/Users/nekilic/Desktop/46/project/hazard/Register_sync_rw.v Line: 9
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 9
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 9
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 9
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 9
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 9
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 9
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 9
     Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 10
     Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 10
     Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 10
@@ -1254,14 +1232,14 @@ Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 23
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 23
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/nekilic/Desktop/46/project/hazard/DE1_SOC.v Line: 23
-Info (21057): Implemented 2666 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2695 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 2600 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 4982 megabytes
-    Info: Processing ended: Tue Jun 20 23:15:43 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:07
+    Info (21061): Implemented 2629 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
+    Info: Peak virtual memory: 4962 megabytes
+    Info: Processing ended: Wed Jun 21 11:39:37 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:15
 
 

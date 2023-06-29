@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1687291056" />
-    <testcase name="test_hazard" classname="test_hazard" file="C:\Users\nekilic\Desktop\46\hazard\test_hazard.py" lineno="1" time="0.16358470916748047" sim_time_ns="376000000.001" ratio_time="2298503337.595237" />
+    <property name="random_seed" value="1687335083" />
+    <testcase name="test_desoc" classname="test_desoc" file="C:\Users\nekilic\Desktop\46\project\hazard\test_desoc.py" lineno="12" time="0.015619993209838867" sim_time_ns="376000000.001" ratio_time="24071713409.206963" />
   </testsuite>
 </testsuites>

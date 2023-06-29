@@ -2,7 +2,7 @@ module hazard(
 	input clk,
 	input reset,
 	input wire [3:0] reg_out_select,
-	output wire [3:0] reg_out_out,
+	output wire [31:0] reg_out_out,
 	output wire [31:0] register0,
 	output wire [31:0] register1,
 	output wire [7:0] mem0,

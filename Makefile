@@ -24,10 +24,10 @@ VERILOG_SOURCES += $(PWD)/hexto7seg.v
 VERILOG_SOURCES += $(PWD)/DE1_SOC.v
 
 # TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
-TOPLEVEL = hazard
+TOPLEVEL = DE1_SOC
 
 # MODULE is the basename of the Python test file
-MODULE = test_hazard
+MODULE = test_desoc
 
 # include cocotb's make rules to take care of the simulator setup
 include $(shell cocotb-config --makefiles)/Makefile.sim
